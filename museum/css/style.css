@@ -17,25 +17,38 @@ html{
   scroll-behavior: smooth;
 }
 
+
 body{
+  box-sizing: border-box;
   margin: 0;
+  
 }
 
 header{
+  box-sizing: border-box;
   max-width: 1920px;
   margin: 0 auto;
   background-color: #030303;
 }
 
+h2{
+  font-family: Forum;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 .container{
+  box-sizing: border-box;
   max-width: 1440px;
   margin: 0 auto;
-  margin-top: 1px;
 }
 
 .header-container{
-  
-   
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +60,6 @@ header{
   width: 195px;
   height: 50px;
   color: #ffffff;
-
 }
 
 .logo-icon{
@@ -72,9 +84,9 @@ header{
 }
 
 .header-nav{
-  display: block;
-  
+  display: block;  
 }
+
 .header-meny{
   display: flex;
   justify-content: space-between;
@@ -103,8 +115,7 @@ header{
   background-color: #030303;
   background-image: url("../assets/img/background.jpg");
   background-repeat: no-repeat;
-  background-position: 705px 0px;
-  
+  background-position: 705px 0px;  
 }
 
 
@@ -117,17 +128,7 @@ header{
 
 .welcome > h2{
   margin: 0;
-  padding-top: 113px;
-  
-
-  font-family: Forum;
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 90px;
-  letter-spacing: 5px;
-  text-align: left;
-  text-transform: uppercase;
+  padding-top: 115px;
 }
 
 .welcome > p{
@@ -166,3 +167,77 @@ header{
 
 
 
+.visiting-title{
+  margin-top: 75px;
+  position: relative;
+  color: #9D8665;
+}
+
+.visiting-title::after{
+  content: "";
+  position: absolute;
+  bottom: -29px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #710707;
+}
+
+.container-cards{
+display: flex;
+flex-wrap: wrap;
+row-gap: 58px;
+column-gap: 60px;
+padding-top: 38px;
+}
+
+.card-item{
+  color:#000000;
+  text-decoration: none;
+}
+
+.card-item h3{
+  position: relative;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  font-family: Forum;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.card-item h3::after{
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 300px;
+  height: 2px;
+  background-color: #710707;
+ 
+}
+
+.card-virtual-text{
+   font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card-google-text{
+  margin-top: -13px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
