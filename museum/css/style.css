@@ -165,8 +165,6 @@ h2{
   text-decoration: none;
 }
 
-
-
 .visiting-title{
   margin-top: 75px;
   position: relative;
@@ -218,11 +216,10 @@ padding-top: 38px;
   width: 300px;
   height: 2px;
   background-color: #710707;
- 
 }
 
 .card-virtual-text{
-   font-family: Roboto;
+  font-family: Roboto;
   font-size: 22px;
   font-style: normal;
   font-weight: 200;
@@ -240,4 +237,71 @@ padding-top: 38px;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.container-explorer-black{
+  box-sizing: border-box;
+  max-width: 1920px;
+  min-height: 865px;
+  margin: 0 auto;
+  background-color: #000000;
+}
+
+.explore-container{
+  display: flex;  
+  justify-content: space-around;
+  column-gap: 50px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 55px;
+  padding-top: 75px;
+  
+}
+
+.explore{
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.explore h2{
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 103px;
+  font-family: Forum;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-align: left;
+}
+
+.explore h2::after{
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 660px;
+  height: 3px;
+  background-color: #710707;
+}
+
+.explore p{
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.explore span{
+  color: #9D8665;
+}
+
+.explore-image{
+  padding-top:15px
 }
