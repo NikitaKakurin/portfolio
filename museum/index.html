@@ -20,7 +20,7 @@
               <li class="meny-item"><a href="#visiting">Visiting</a></li>
               <li class="meny-item"><a href="#explore">Explore</a></li>
               <li class="meny-item"><a href="#video">Video</a></li>
-              <li class="meny-item"><a href="">Tickets</a></li>
+              <li class="meny-item"><a href="#tickets">Tickets</a></li>
               <li class="meny-item"><a href="">Contacts</a></li>
             </ul>
           </nav>
@@ -91,7 +91,7 @@
             </div>
           </section>
         </div>
-        <div class="container-explorer-black">
+        <div class="container-black">
           <div class="explore-container">
             <section class="explore" id="explore">
               <h2>Picture explore</h2>
@@ -135,15 +135,61 @@
             <h2>Video journey</h2>
             <p>Enter and visit one of the most famous museums in the world and enjoy<br>
             masterpieces such as Mona Lisa or Hammurabi's Code</p>
-
-          
           </section>
         </div>
-        <section>
-          <div class="container">
+        <div class="container-black container-tickets">
+          <section class="container tickets" id="tickets">
+            <h2>Buy Tickets</h2>
+            <div class="container-flex">
+              <img src="assets/img/tickets-img.jpg" alt="picture">
+            
+              <form class="form" method="POST">
+                <div class="ticket-type">
+                  <p>Ticket Type</p>
 
-          </div>
-        </section>
+                  <label class="container-radio">Permanent exhibition
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container-radio">Temporary exhibition
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container-radio">Combined Admission
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+
+
+                </div>
+                <div class="ticket-amount">
+                  <p class="amount">Amount</p>
+                  <div>
+                  <p class="ticket-amount-category">Basic 18+</p>
+                  <div class="container-button">
+                    <button class="statement" type="button" onclick="this.nextElementSibling.stepDown()">&minus;</button>
+                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                    <button class="statement" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  </div>
+                  </div>
+                  <div class="ticket-button-cont">
+                  <p class="ticket-amount-category">Senior 65+</p>
+                  <div class="container-button">
+                    <button class="statement" type="button" onclick="this.nextElementSibling.stepDown()">&minus;</button>
+                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                    <button class="statement" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                  </div>
+                  </div>
+                  <p class="total">Total &#8364;220</p>
+                  <button class="buy-now" type="button" >Buy now</button>
+                </div>
+
+              </form>
+
+            </div>
+                      
+          </section>
+        </div>
         <section>
           <div class="container">
 

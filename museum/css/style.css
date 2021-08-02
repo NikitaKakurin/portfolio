@@ -239,7 +239,7 @@ padding-top: 38px;
   text-align: left;
 }
 
-.container-explorer-black{
+.container-black{
   box-sizing: border-box;
   max-width: 1920px;
   min-height: 865px;
@@ -433,12 +433,23 @@ padding-top: 38px;
   text-align: left;
 }
 
-.Tickets h2{
-  color: #ffffff;
-  
+.container-tickets{
+  width: 1920px;
+  height: 893px;
+  margin-top: 75px;
 }
 
-.Tickets h2::after{
+.tickets{
+  padding-top: 10px;
+}
+
+.tickets h2{
+  position: relative;
+  color: #ffffff;
+}
+
+
+.tickets h2::after{
   content: "";
   position: absolute;
   bottom: -28px;
@@ -448,5 +459,202 @@ padding-top: 38px;
   background-color: #710707;
 }
 
+.container-flex{
+  display: flex;
+  column-gap: 60px;
+  padding-top: 35px;
+}
 
 
+.ticket-type p{
+  margin-top: 0;
+  
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+
+
+}
+
+.form{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+/*---------Cтилизация radio------------*/
+
+.container-radio{
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 50px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color:#ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  cursor: pointer;
+
+}
+
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  
+}
+
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.container-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-radio .checkmark:after {
+ 	top: 3.33px;
+	left: 3.33px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: white;
+}
+
+/*---------Cтилизация radio------------*/
+
+/*---------Cтилизация ticket-amount------------*/
+.ticket-amount{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  color: #ffffff;
+}
+.statement{
+  box-sizing: border-box;
+  background-color: #000000;  
+  color: #ffffff;
+  border: none;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: center;
+
+}
+
+.number {
+  box-sizing: border-box;
+  all: unset;
+  width: 2em;
+  text-align: right;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0em;
+  
+}
+.container-button{
+  display: flex;
+  justify-content: space-around;
+  width: 144px;
+  height: 44px;
+  border: 3px solid #ffffff;
+  
+
+}
+
+.buy-now{
+  margin-top: 22px;
+  width: 175px;
+  height: 50px;
+  background: #ffffff;
+  color: #000;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-align: center;
+
+}
+.ticket-amount-category{
+  
+  margin-bottom: 13px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.total{
+  margin-top: 50px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 1.649999976158142px;
+  text-align: left;
+
+}
+.amount{
+  font-family: Roboto;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+.amount{
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+
+.ticket-button-cont{
+  margin-top: 15px;
+}
+
+/*---------Cтилизация ticket-amount------------*/
