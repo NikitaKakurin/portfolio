@@ -19,7 +19,7 @@
             <ul class="header-meny">
               <li class="meny-item"><a href="#visiting">Visiting</a></li>
               <li class="meny-item"><a href="#explore">Explore</a></li>
-              <li class="meny-item"><a href="">Video</a></li>
+              <li class="meny-item"><a href="#video">Video</a></li>
               <li class="meny-item"><a href="">Tickets</a></li>
               <li class="meny-item"><a href="">Contacts</a></li>
             </ul>
@@ -104,15 +104,41 @@
             <div class="explore-image">
               <img src="assets/img/explore-rectangle.jpg" alt="Las Meninas">
             </div>
-            
           </div>
         </div>
-        </section>
-        <section>
-          <div class="container">
+        <div class="container">
+          <section class="video" id="video">
+            <div class="container-player">
+              <div class="main-play-container">
+                <button class="main-play"><span><img src="assets/svg/main-play.png" alt="main-play"></span></button>
+              </div> 
+              <div class="player-manage-tools">
+                <button class="button-back">
+                  <img src="assets/svg/vector I.png" alt="back"><img src="assets/svg/vector back.png" alt="back">
+                </button>
+                <button class="button-run">
+                  <img src="assets/svg/vector run.png" alt="run">
+                </button>
+                <button class="button-next">
+                  <img src="assets/svg/vector run.png" alt="next"><img src="assets/svg/vector I.png" alt="next">
+                </button>
+                <input  type="range" min="0" max="100" step="1" class="progress">
+                <button class="button-sound">
+                  <img src="assets/svg/sound.png" alt="sound-icon">
+                </button>
+                <input  type="range" min="0" max="100" step="1" class="volume">
+                <button class="button-fullscreen">
+                  <img class="sound" src="assets/svg/fullscreen.png" alt="sound-icon">
+                </button>
+              </div>
+            </div>
+            <h2>Video journey</h2>
+            <p>Enter and visit one of the most famous museums in the world and enjoy<br>
+            masterpieces such as Mona Lisa or Hammurabi's Code</p>
 
-          </div>
-        </section>
+          
+          </section>
+        </div>
         <section>
           <div class="container">
 
@@ -127,5 +153,6 @@
   <footer>
 
   </footer>
+  <script src="js/index.js"></script>
 </body>
 </html>

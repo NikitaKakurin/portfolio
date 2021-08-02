@@ -305,3 +305,148 @@ padding-top: 38px;
 .explore-image{
   padding-top:15px
 }
+
+.container-player{
+  width: 1440px;
+  height: 714px;
+  margin-top: 90px;
+  background-color: #000000;
+  background-image: url("../assets/img/video-rectangle.jpg");
+  background-repeat: no-repeat;
+
+}
+
+
+.main-play-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1440px;
+  height: 629px;
+}
+
+.main-play,
+.player-manage-tools button{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.main-play span{
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  background-image: url("../assets/svg/circle.png");
+}
+
+.main-play span img{
+  margin-left: 77px;
+}
+
+.player-manage-tools{
+  display: flex;
+  align-items: center;
+  
+  width: 1440px;
+  height: 85px;
+  
+  
+}
+
+.progress{
+  background: linear-gradient(to right, #24809E 0%, #24809E 50%, #C4C4C4 50%, #C4C4C4 100%) ;
+  border-radius: none;
+  width: 820px;
+  height: 8px;
+  margin-left: 40px ;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #ffffff;
+}
+
+.button-sound{
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.volume{
+  background: linear-gradient(to right, #24809E 0%, #24809E 50%, #C4C4C4 50%, #C4C4C4 100%) ;
+  border-radius: none;
+  width: 155px;
+  height: 8px;
+  margin-left: 20px ;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.volume::-webkit-slider-thumb{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #ffffff;
+}
+
+.button-back{
+  margin-left: 40px;
+}
+.button-run{
+  margin-left: 40px;
+}
+
+.button-next{
+  margin-left: 40px;
+}
+
+.button-fullscreen{
+  margin-left: 50px;
+}
+
+.video h2{
+  color: #9D8665;
+  margin-top: 40px;
+}
+
+.video p{
+  margin-top: -150px;
+  margin-right: 25px;
+  float:right;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 39px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.Tickets h2{
+  color: #ffffff;
+  
+}
+
+.Tickets h2::after{
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  width: 1440px;
+  height: 3px;
+  background-color: #710707;
+}
+
+
+
