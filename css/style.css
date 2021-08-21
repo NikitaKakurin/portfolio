@@ -21,6 +21,7 @@ h1 {
 kbd{
     display: block;
     font-size: 40px;
+    -webkit-user-select: none
 }
 .nav-slider{
     margin-left: auto;
@@ -62,7 +63,6 @@ kbd{
     transition: all 0.07s;
 }
 .playing{
-
     transform:scale(1.2);
     color: #c2b60b;
     background-color: rgba(0, 0, 0, 0.4);
@@ -76,5 +76,6 @@ kbd{
     letter-spacing: 1px;
     text-transform: uppercase;
     color:#ffc600;
+    -webkit-user-select: none
 }
 
