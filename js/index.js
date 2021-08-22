@@ -14,15 +14,27 @@ let classForAudio = "drum-kit";
 let spanSoundArray = document.querySelectorAll(".sound");
 const spanGuitar = ["E","B","G","D","A","E"];
 const spanDrumKit = ["Clap","Hihat","Kick","Openhat","Boom","Ride","Snare","Tom","Tink"];
-
-//Play Audio and add effects for Key after click or keydown
-function playAudio(keyCode){
-    audioTrack = document.querySelector(`audio.${classForAudio}[data-key="${keyCode}"]`);
+let keyStuck = {
+    "65":false,
+    "83":false,
+    "68":false,
+    "70":false,
+    "71":false,
+    "72":false,
+    "73":false,
+    "75":false,
+    "76":false,
+};
+//Play Audio and add effects for Key after keydown
+function processKeydownOnKey(event){
+    let keyCode= event.keyCode;
+    let audioTrack = document.querySelector(`audio.${classForAudio}[data-key="${keyCode}"]`);
     let key = document.querySelector(`.key[data-key="${keyCode}"]`);
-    if(audioTrack && key &&key.style.display !== "none"){
+    if(audioTrack &&key.style.display !== "none" & keyStuck[keyCode]===false){
         key.classList.add("playing");
         audioTrack.currentTime = 0;
         audioTrack.play();
+        keyStuck[keyCode]=true;
     };
 };
 
@@ -35,14 +47,15 @@ function removeClassPlaying(event){
 
 // Handler for click on Key
 function processClickOnKey(){
-    playAudio(this.getAttribute('data-key'));
+    let keyCode = this.getAttribute('data-key');
+    let audioTrack = document.querySelector(`audio.${classForAudio}[data-key="${keyCode}"]`);
+    let key = document.querySelector(`.key[data-key="${keyCode}"]`);
+    if(audioTrack){
+        key.classList.add("playing");
+        audioTrack.currentTime = 0;
+        audioTrack.play();        
+    };
 };
-
-// Handler for Keydown
-function processKeydownOnKey(event){
-    playAudio(event.keyCode);
-};
-
 // Select the musical instrument
 function changeSlideNext(){
     this.classList.add("changeButtonSlider");
@@ -74,6 +87,10 @@ function removeChangeButtonSlider(event){
         this.classList.remove("changeButtonSlider");
     };
 };
+
+function removeKeyStuck(event){
+    keyStuck[event.keyCode]=false;
+}
 // fix the Bag of long push on the key
 keys.forEach(elem => elem.addEventListener("transitionend", removeClassPlaying));
 keys.forEach(elem => elem.addEventListener("click", processClickOnKey));
@@ -82,6 +99,8 @@ prev.addEventListener("click", changeSlideNext);
 next.addEventListener("transitionend", removeChangeButtonSlider);
 prev.addEventListener("transitionend", removeChangeButtonSlider);
 window.addEventListener("keydown", processKeydownOnKey);
+
+window.addEventListener("keyup", removeKeyStuck);
 
 
 
