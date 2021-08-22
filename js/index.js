@@ -75,13 +75,6 @@ function removeChangeButtonSlider(event){
     };
 };
 // fix the Bag of long push on the key
-function removeClassKey(event){
-    let key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
-    if(key){
-        key.classList.remove("playing");
-    };
-}
-
 keys.forEach(elem => elem.addEventListener("transitionend", removeClassPlaying));
 keys.forEach(elem => elem.addEventListener("click", processClickOnKey));
 next.addEventListener("click", changeSlideNext);
@@ -90,6 +83,6 @@ next.addEventListener("transitionend", removeChangeButtonSlider);
 prev.addEventListener("transitionend", removeChangeButtonSlider);
 window.addEventListener("keydown", processKeydownOnKey);
 
-// fix the Bag of long push on the key
-window.addEventListener("keyup", removeClassKey);
+
+
 
