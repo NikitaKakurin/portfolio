@@ -133,6 +133,7 @@ kbd{
     opacity: 0.8;
     max-height: 100%;
     transition: all 0.7s;
+    -webkit-user-select: none;
 }
 .changeButtonSlider{
     color: #c2b60b;
