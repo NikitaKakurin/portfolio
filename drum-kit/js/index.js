@@ -4,7 +4,7 @@ const slide = document.querySelector(".img-slide");
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 // for change src slide-image
-let slideSrcArray = ["../assets/img/drum-kit.jpg","../assets/img/guitar.jpg"];
+let slideSrcArray = ["./assets/img/drum-kit.jpg","./assets/img/guitar.jpg"];
 let slideNumber = 1;
 // for display=none for key
 const noGuitarKeys = document.querySelectorAll(".noGuitar");
@@ -65,6 +65,7 @@ function changeSlideNext(){
         noGuitarKeys.forEach(elem => {
             elem.style.display ="none"; 
         });
+        slide.alt = "Guitar";
         classForAudio = "guitar";
         for(let i = 0; i<spanGuitar.length; i++){
             spanSoundArray[i].innerHTML = spanGuitar[i];
@@ -74,6 +75,7 @@ function changeSlideNext(){
         noGuitarKeys.forEach(elem => {
             elem.style.display ="block";
         });
+        slide.alt = "Drum-kit";
         classForAudio = "drum-kit";
         for(let i = 0; i<spanDrumKit.length; i++){
             spanSoundArray[i].innerHTML = spanDrumKit[i];
