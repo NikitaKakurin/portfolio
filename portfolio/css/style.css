@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap');
+
+:root{
+    --main-text-color:#ffffff;
+    --active-text-color:#BDAE82;
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h1{
+    font-family: "Merriweather", serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--main-text-color);
+  }
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header{
+    min-height: 910px;
+    background-image: url("../assets/img/header-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.container-header{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 40px;
+    background-image: url('../assets/svg/logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;  
+    transition: 0.3s;
+  }
+  .logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
+  }
+
+.menu{
+    margin-left: auto;
+}
+.menu__list{
+    display:flex;
+    list-style: none;
+    gap: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 33px;
+    text-align: start;
+}
+
+.menu__item a{
+    text-decoration: none;
+    line-height: 50px;
+    letter-spacing: 0em;
+    color: var(--main-text-color);
+    transition: color 0.5s;
+}
+.menu__item a:hover{
+    color: var(--active-text-color);
+}
+
+.toggle-language{
+    color: var(--main-text-color);
+}
+.toggle-language__button{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--main-text-color);
+}
+
+.toggle-language__button-checked{
+    color: var(--active-text-color);
+}
+
+.toggle-language span{
+    padding: 0 3px;
+}
+
+main{
+    margin-top: -700px;
+}
