@@ -8,7 +8,7 @@
 html{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1rem;
     scroll-behavior: smooth;
 }
 
@@ -23,11 +23,12 @@ body {
   }
 
   h1{
+    margin-bottom: 0px;
     font-family: "Merriweather", serif;
-    font-size: 60px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 120px;
+    line-height: 6rem;
     letter-spacing: 0em;
     text-align: left;
     color: var(--main-text-color);
@@ -55,7 +56,7 @@ body {
 
 .logo {
     width: 50px;
-    height: 40px;
+    height: 2rem;
     background-image: url('../assets/svg/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;  
@@ -81,7 +82,7 @@ body {
 
 .menu__item a{
     text-decoration: none;
-    line-height: 50px;
+    line-height: 2rem;
     letter-spacing: 0em;
     color: var(--main-text-color);
     transition: color 0.5s;
@@ -109,6 +110,30 @@ body {
     padding: 0 3px;
 }
 
-main{
+.section__hero{
     margin-top: -700px;
+    margin-left: 60px;
+}
+
+.section__hero-paragraph{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 470px;
+    height: 120px;
+    line-height: 2rem;
+    color: var(--main-text-color);
+}
+
+.section__hero-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 55px;
+    text-decoration: none;
+    color: #000000;
+    background-color: var(--active-text-color);
+}
+.section__hero-button:hover{
+    color: var(--main-text-color);
 }
