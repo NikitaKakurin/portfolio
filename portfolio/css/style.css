@@ -272,6 +272,29 @@ body {
 
 .section-portfolio__container-buttons{
     display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 5px;
 }
 
+.section-portfolio__button{
+    width: 220px;
+    height: 55px;
+    background-color: #000000;
+    border: 2px solid var(--active-text-color);
+    color: var(--active-text-color);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.section-portfolio__button:hover,
+.section-portfolio__button-checked{
+    background-color: var(--active-text-color);
+    color: #000000;
+}
 
