@@ -311,5 +311,30 @@ body {
 
 .section-video{
     padding-top: 67px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #000000;
+}
+
+.section-video__container-video{
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-video__main-play{
+    position: absolute;
+    background-image: url("../assets/svg/main-play.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center ;
+    width: 130px;
+    height: 130px;
+    z-index: 100;
+}
+
+.section-video__main-play:hover{
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
 }
