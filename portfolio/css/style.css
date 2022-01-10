@@ -40,6 +40,35 @@ body {
     padding: 0;
 }
 
+/* ----------------Title in sections is below---------------- */
+
+.section h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin-left:auto ;
+    margin-right: auto;
+    gap: 20px;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0em;
+    color: var(--active-text-color);
+}
+
+.section__before-title,
+.section__after-title{
+    display: block;
+    width: 275px;
+    height: 2px;
+    background-color: var(--active-text-color);
+}
+
+/* ----------------Title in sections is above---------------- */
 
 /* ------------------Header is below----------------- */
 .header{
@@ -158,40 +187,7 @@ body {
     text-align: center;
 }
 
-h2{
-    display: inline-block;
-    position: relative;
-    font-family: "Merriweather", serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 4rem;
-    letter-spacing: 0em;
-    text-align: center;
-    color: var(--active-text-color);
-}
 
-h2::after{
-    display: block;
-    position: absolute;
-    content: "";
-    left: 132px;
-    top: 2rem;
-    width: 275px;
-    height: 2px;
-    background-color: var(--active-text-color);
-}
-
-h2::before{
-    display: block;
-    position: absolute;
-    content: "";
-    right: 132px;
-    top: 2rem;
-    width: 275px;
-    height: 2px;
-    background-color: var(--active-text-color);
-}
 
 .section-skills__list{
     width: 100%;
@@ -265,5 +261,15 @@ h2::before{
 /* ------------------section__skills is above----------------- */
 
 /* ------------------section__portfolio is below----------------- */
+
+.section-portfolio{
+    width: 100%;
+    padding-top: 66px;
+    background-color: #000000;
+    text-align: center;
+    height: 1000px;
+}
+
+
 
 
