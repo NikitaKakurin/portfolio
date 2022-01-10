@@ -180,7 +180,7 @@ body {
 
 .section-skills{
     width: 100%;
-    height: 482px;
+    /* height: 482px; */
     margin-top: 330px;
     padding-top: 66px;
     background-color: #000000;
@@ -233,7 +233,7 @@ body {
 
 .section-skills__item-header{
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-style: normal;
@@ -264,7 +264,7 @@ body {
 
 .section-portfolio{
     width: 100%;
-    padding-top: 66px;
+    padding-top: 69px;
     background-color: #000000;
     text-align: center;
 }
@@ -305,4 +305,11 @@ body {
     padding: 0 20px;
     
 }
+/* ------------------section__portfolio is above----------------- */
 
+/* ------------------section__video is below----------------- */
+
+.section-video{
+    padding-top: 67px;
+    background-color: #000000;
+}
