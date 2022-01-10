@@ -74,7 +74,7 @@ body {
 .header{
     
     min-height: 910px;
-    background-image: url("../assets/img/header-bg.png");
+    background-image: url("../assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
 }
@@ -270,6 +270,8 @@ body {
     height: 1000px;
 }
 
-
+.section-portfolio__container-buttons{
+    display: flex;
+}
 
 
