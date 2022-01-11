@@ -494,6 +494,13 @@ body {
     line-height: 2rem;
     letter-spacing: 0em;
     color: var(--active-text-color);
+	transition: color .5s;
+}
+
+.section-contacts__form-message:hover::placeholder,
+.section-contacts__form-phone:hover::placeholder,
+.section-contacts__form-email:hover::placeholder{
+	color: var(--main-text-color);
 }
 
 .section-contacts__form-message{
