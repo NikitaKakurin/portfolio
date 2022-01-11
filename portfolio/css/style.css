@@ -9,10 +9,7 @@
 }
 
 html{
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
+
     scroll-behavior: smooth;
 }
 
@@ -24,10 +21,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+	font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
   }
 
   h1{
-    margin-bottom: 0px;
+    margin: 0;
     font-family: "Merriweather", serif;
     font-size: 3rem;
     font-style: normal;
@@ -45,6 +46,7 @@ body {
     width: 1440px;
     margin: 0 auto;
     padding: 0;
+
 }
 /* -----------------Buttons in sections is below------------------- */
 .big-button{
@@ -94,14 +96,14 @@ body {
 
 /* ------------------Header is below----------------- */
 .header{
-    min-height: 910px;
+    height: 90px;
     background-image: url("../assets/img/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
 }
 
 .container-header{
-    padding: 0 20px;
+	padding: 0 20px;
     display: flex;
     justify-content: center;
     height: 90px;
@@ -176,12 +178,15 @@ body {
 /* ------------------Header is above----------------- */
 
 /* ------------------section__hero is below----------------- */
-.section__hero{
-    margin-top: -700px;
-    margin-left: 80px;
-    background: transparent;
+.section__hero-container{
+	height: 820px;
+    margin-top: 0;
+	padding-top: 160px;
+    padding-left: 80px;
+	background-image: url("../assets/img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center -90px;
 }
-
 .section__hero-paragraph{
     margin-top: 10px;
     margin-bottom: 25px;
@@ -209,8 +214,7 @@ body {
 
 .section-skills{
     width: 100%;
-    margin-top: 330px;
-    padding-top: 66px;
+    padding-top: 67px;
     text-align: center;
 }
 
@@ -383,7 +387,7 @@ body {
 }
 
 .section-price__item-title{
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     font-family: "Merriweather", serif;
     font-size: 1.4rem;
     font-style: normal;
@@ -540,6 +544,7 @@ body {
 }
 
 .footer-container__github{
+	padding-left: 2px;
 	display: flex;
 	gap: 20px;
 }
