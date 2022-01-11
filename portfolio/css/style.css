@@ -8,7 +8,8 @@
 html{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-style: normal;
+    font-size: 20px;
     scroll-behavior: smooth;
 }
 
@@ -33,16 +34,32 @@ body {
     text-align: left;
     color: var(--main-text-color);
   }
+.section{
+    background-color: #000000;
+}
 
 .container{
     width: 1440px;
     margin: 0 auto;
     padding: 0;
 }
+/* -----------------Buttons in sections is below------------------- */
+.big-button{
+    width: 220px;
+    height: 55px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    text-align: center;
+}
+/* -----------------Buttons in sections is above------------------- */
 
 /* ----------------Title in sections is below---------------- */
 
-.section h2{
+.section-title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,8 +77,8 @@ body {
     color: var(--active-text-color);
 }
 
-.section__before-title,
-.section__after-title{
+.section__before-text,
+.section__after-text{
     display: block;
     width: 275px;
     height: 2px;
@@ -89,7 +106,7 @@ body {
 
 .logo {
     width: 50px;
-    height: 2rem;
+    height: 40px;
     background-image: url('../assets/svg/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;  
@@ -106,7 +123,7 @@ body {
 .menu__list{
     display:flex;
     list-style: none;
-    gap: 30px;
+    gap: 32px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 33px;
@@ -125,9 +142,17 @@ body {
 }
 
 .toggle-language{
+    font-weight: 700;
     color: var(--main-text-color);
 }
 .toggle-language__button{
+    font-family: "Inter",sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0em;
+    text-align: center;
     padding: 0;
     margin: 0;
     background-color: transparent;
@@ -149,6 +174,7 @@ body {
 .section__hero{
     margin-top: -700px;
     margin-left: 80px;
+    background: transparent;
 }
 
 .section__hero-paragraph{
@@ -164,8 +190,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 55px;
     text-decoration: none;
     color: #000000;
     background-color: var(--active-text-color);
@@ -180,14 +204,10 @@ body {
 
 .section-skills{
     width: 100%;
-    /* height: 482px; */
     margin-top: 330px;
     padding-top: 66px;
-    background-color: #000000;
     text-align: center;
 }
-
-
 
 .section-skills__list{
     width: 100%;
@@ -234,10 +254,6 @@ body {
 .section-skills__item-header{
     margin-top: 50px;
     margin-bottom: 21px;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
     line-height: 2rem;
     letter-spacing: 0.02rem;
     text-align: center;
@@ -248,10 +264,7 @@ body {
     margin: 0;
     width: 280px;
     height: 72px;
-    font-family: Inter;
     font-size: .9rem;
-    font-style: normal;
-    font-weight: 400;
     line-height: 1.8rem;
     letter-spacing: 0em;
     text-align: center;
@@ -265,7 +278,6 @@ body {
 .section-portfolio{
     width: 100%;
     padding-top: 69px;
-    background-color: #000000;
     text-align: center;
 }
 
@@ -278,21 +290,16 @@ body {
 }
 
 .section-portfolio__button{
-    width: 220px;
-    height: 55px;
     background-color: #000000;
     border: 2px solid var(--active-text-color);
     color: var(--active-text-color);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2rem;
-    letter-spacing: 0em;
-    text-align: center;
-    transition: all 0.5s;
+    transition: color 0.5s;
 }
 
-.section-portfolio__button:hover,
+.section-portfolio__button:hover{
+    color: var(--main-text-color);
+}
+
 .section-portfolio__button-checked{
     background-color: var(--active-text-color);
     color: #000000;
@@ -303,7 +310,10 @@ body {
     gap: 25px;
     flex-wrap: wrap;
     padding: 0 20px;
-    
+}
+.section-portfolio__img{
+    max-width: 450px;
+    height: auto;
 }
 /* ------------------section__portfolio is above----------------- */
 
@@ -313,11 +323,10 @@ body {
     padding-top: 67px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #000000;
 }
 
 .section-video__container-video{
-    margin-top: 60px;
+    margin-top: 3rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -332,9 +341,257 @@ body {
     width: 130px;
     height: 130px;
     z-index: 100;
+    transition: all .5s;
 }
 
 .section-video__main-play:hover{
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
     contrast(87%);
 }
+
+/* ------------------section__video is above----------------- */
+
+/* ------------------section__price is below----------------- */
+
+.section-price{
+    padding-top: 67px ;
+    min-height: 845px;
+}
+
+.section-price__container-prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top:  60px; 
+}
+
+.price-section__price-item{
+    width: 450px;
+    height: 505px;
+    padding-top: 40px;
+    border: 3px solid var(--active-text-color);
+}
+
+.price-section__price-item span{
+    display: block;
+}
+
+.section-price__item-title{
+    margin-bottom: 22px;
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.8rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.section-price__item-price{
+    margin-bottom: 20px;
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--active-text-color);
+}
+
+.section-price__item-text{
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.section-price__item-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    color: #000000;
+    background-color: var(--active-text-color);
+    border: none;
+}   
+
+.section-price__item-button:hover{
+    color: var(--main-text-color);
+}
+
+
+
+/* ------------------section__price is above----------------- */
+
+/* ------------------section__contacts is below----------------- */
+
+.section-contacts{
+    background-image: url("../assets/img/contacts-bg.jpg");
+    padding-top: 27px;
+    padding-right: 25px ;
+    height: 700px;
+}
+
+.section-contacts__title{
+    margin-left: auto;
+    text-align: left;
+    font-family: "Merriweather", serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0em;
+    width: 445px;
+    color: var(--active-text-color);
+}
+.section-contacts__form{
+    margin-top: 40px;
+    width: 445px;
+    margin-left: auto;
+}
+
+.section-contacts__form-message,
+.section-contacts__form-phone,
+.section-contacts__form-email{
+    padding-left: 18px;
+    margin-bottom: 20px;
+    width: 450px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--active-text-color);
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    border: 2px solid var(--active-text-color);
+}
+
+.section-contacts__form-phone,
+.section-contacts__form-email{
+    height: 50px;
+}
+
+.section-contacts__form-message::placeholder,
+.section-contacts__form-phone::placeholder,
+.section-contacts__form-email::placeholder{
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    color: var(--active-text-color);
+}
+
+.section-contacts__form-message{
+    width: 450px;
+    height: 100px;
+    resize: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+    color: var(--active-text-color);
+}
+
+   
+.section-contacts__form-button{
+    margin-top: 5px;
+    color: #000000;
+    background-color: var(--active-text-color);
+    border: none;
+}   
+
+.section-contacts__form-button:hover{
+    color: var(--main-text-color);
+}
+
+/* ------------------section__contacts is above----------------- */
+
+/* ------------------footer is below----------------- */
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+	font-family: Inter;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2.5rem;
+	letter-spacing: 0em;
+	text-align: left;
+    background-color: #000000;
+    color: var(--main-text-color);
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.footer-container__github{
+	display: flex;
+	gap: 20px;
+}
+
+.footer-container__rsschool-link,
+.footer-container__github-link{
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.footer-container__rsschool-link{
+	display: block;
+	width: 225px;
+	text-align: right;
+}
+
+.footer-container__rsschool-link:hover,
+.footer-container__github-link:hover{
+    color: var(--active-text-color);
+}
+
+.footer-container__social-list{
+    display: flex;
+	gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-container__social-item{
+    text-decoration: none;
+}
+
+.footer-container__social-icon{
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+.footer-container__social-icon-instagram{
+  	background-image: url("../assets/svg/inst.svg");
+}
+
+.footer-container__social-icon-facebook{
+  	background-image: url("../assets/svg/fb.svg");
+}
+
+.footer-container__social-icon-twitter{
+  	background-image: url("../assets/svg/tw.svg");
+}
+
+.footer-container__social-icon-pinterest{
+  	background-image: url("../assets/svg/pinterest.svg");
+}
+
+.footer-container__social-icon:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
+  }
