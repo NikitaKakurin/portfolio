@@ -3,6 +3,9 @@
 :root{
     --main-text-color:#ffffff;
     --active-text-color:#BDAE82;
+	--dark-color:#000000;
+	--filter-icon:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+	contrast(87%);
 }
 
 html{
@@ -35,7 +38,7 @@ body {
     color: var(--main-text-color);
   }
 .section{
-    background-color: #000000;
+    background-color: var(--dark-color);
 }
 
 .container{
@@ -47,13 +50,15 @@ body {
 .big-button{
     width: 220px;
     height: 55px;
-    font-family: "Inter", sans-serif;
+    font-family: inherit;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: 0em;
     text-align: center;
+	cursor: pointer;
+	transition: all 0.5s;
 }
 /* -----------------Buttons in sections is above------------------- */
 
@@ -109,12 +114,12 @@ body {
     height: 40px;
     background-image: url('../assets/svg/logo.svg');
     background-size: contain;
-    background-repeat: no-repeat;  
-    transition: 0.3s;
+    background-repeat: no-repeat; 
+	cursor: pointer; 
+    transition: 0.5s;
   }
   .logo:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-      contrast(87%);
+    filter: var(--filter-icon);
   }
 
 .menu{
@@ -123,7 +128,7 @@ body {
 .menu__list{
     display:flex;
     list-style: none;
-    gap: 32px;
+    gap: 31px;
     margin-top: 0;
     margin-bottom: 0;
     margin-right: 33px;
@@ -146,18 +151,19 @@ body {
     color: var(--main-text-color);
 }
 .toggle-language__button{
-    font-family: "Inter",sans-serif;
+	padding: 0;
+    margin: 0;
+    font-family: inherit;
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: 0em;
     text-align: center;
-    padding: 0;
-    margin: 0;
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
+	cursor: pointer;
 }
 
 .toggle-language__button-checked{
@@ -191,7 +197,7 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: #000000;
+    color: var(--dark-color);
     background-color: var(--active-text-color);
 }
 .section__hero-button:hover{
@@ -290,7 +296,7 @@ body {
 }
 
 .section-portfolio__button{
-    background-color: #000000;
+    background-color: var(--dark-color);
     border: 2px solid var(--active-text-color);
     color: var(--active-text-color);
     transition: color 0.5s;
@@ -302,7 +308,7 @@ body {
 
 .section-portfolio__button-checked{
     background-color: var(--active-text-color);
-    color: #000000;
+    color: var(--dark-color);
 }
 
 .section-portfolio__container-img{
@@ -342,11 +348,11 @@ body {
     height: 130px;
     z-index: 100;
     transition: all .5s;
+	cursor: pointer;
 }
 
 .section-video__main-play:hover{
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
+    filter: var(--filter-icon);
 }
 
 /* ------------------section__video is above----------------- */
@@ -413,7 +419,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
-    color: #000000;
+    color: var(--dark-color);
     background-color: var(--active-text-color);
     border: none;
 }   
@@ -505,7 +511,7 @@ body {
    
 .section-contacts__form-button{
     margin-top: 5px;
-    color: #000000;
+    color: var(--dark-color);
     background-color: var(--active-text-color);
     border: none;
 }   
@@ -530,7 +536,7 @@ body {
 	line-height: 2.5rem;
 	letter-spacing: 0em;
 	text-align: left;
-    background-color: #000000;
+    background-color: var(--dark-color);
     color: var(--main-text-color);
 	padding-left: 20px;
 	padding-right: 20px;
@@ -574,6 +580,7 @@ body {
 	display: block;
 	width: 32px;
 	height: 32px;
+	transition: all 0.5s;
 }
 .footer-container__social-icon-instagram{
   	background-image: url("../assets/svg/inst.svg");
@@ -592,6 +599,5 @@ body {
 }
 
 .footer-container__social-icon:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-      contrast(87%);
+    filter: var(--filter-icon);
   }
