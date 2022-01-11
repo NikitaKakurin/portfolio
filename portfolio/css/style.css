@@ -94,7 +94,6 @@ body {
 
 /* ------------------Header is below----------------- */
 .header{
-    
     min-height: 910px;
     background-image: url("../assets/img/header-bg.jpg");
     background-repeat: no-repeat;
@@ -428,8 +427,6 @@ body {
     color: var(--main-text-color);
 }
 
-
-
 /* ------------------section__price is above----------------- */
 
 /* ------------------section__contacts is below----------------- */
@@ -554,8 +551,7 @@ body {
 }
 
 .footer-container__rsschool-link{
-	display: block;
-	width: 225px;
+	padding-left: 20px;
 	text-align: right;
 }
 
