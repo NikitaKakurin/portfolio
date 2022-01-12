@@ -218,14 +218,15 @@ body {
 }
 
 .section-skills__list{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+    row-gap: 36px;
     width: 100%;
     margin: 0;
     padding-top: 27px;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+    padding-left: 0;
 }
 
 .section-skills__item{
@@ -292,6 +293,7 @@ body {
 .section-portfolio__container-buttons{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 60px;
     gap: 5px;
@@ -315,6 +317,7 @@ body {
 
 .section-portfolio__container-img{
     display: flex;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     padding: 0 20px;
@@ -371,6 +374,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    flex-wrap: wrap;
     margin-top:  60px; 
 }
 
