@@ -1,3 +1,174 @@
+@media (max-width:1200px) {
+    .section-skills__item{
+        min-width: 35%;
+        height: 225px;
+    }
+
+}
+@media (max-width:900px) {
+    .section-portfolio__container-buttons{
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+    }
+
+}
+
 @media (max-width:768px) {
-    
+
+/* ------------------Header is below----------------- */
+
+    .burger-button{
+        display: flex;
+    }
+
+    .menu__list{
+        display: none;
+        position: absolute;
+        top:0;
+        right: -680px;
+        width: 620px;
+        height: 1024px;
+        padding-left: 127px;
+        padding-top: 134px;
+        flex-direction: column;
+        gap: 16px; 
+        font-size: 35px;
+        line-height: 73px;
+        letter-spacing: 0em;
+        background-color: var(--dark-color);
+        transition: all 1s;
+    }
+
+    .container-header{
+        padding-left: 60px;
+        padding-right: 64px;
+    }
+
+    .toggle-language{
+        gap: 10px;
+    }
+
+    .toggle-language__button{
+        padding-left: 10px;
+    }
+
+    .header{
+        background-position: -5px -30px; 
+        background-size: auto 620px;
+    }
+
+/* ------------------Header is above----------------- */
+
+/* ------------------section__hero is below----------------- */
+
+
+    .section__hero-container{
+        height: 590px;
+        padding-top: 78px;
+        padding-left: 60px;
+        background-position: -5px -120px;
+        background-size: auto 620px;
+    }
+
+    h1{ font-size: 32px;
+        line-height: 64px;
+      }
+
+    .section__hero-paragraph{
+        margin-top: 20px;
+        margin-bottom: 60px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+        width: 390px;
+        height: 72px;
+
+    }
+/* ------------------section__hero is above----------------- */
+
+/* ------------------section__skills is below----------------- */
+
+    .section-skills{
+        padding-top: 10px;
+    }
+
+/* ----------------Title in sections is below---------------- */
+    .section__title{
+        width: 364px;
+        margin-top: 0;
+        margin-left : auto;
+        margin-right: auto;
+        font-size: 32px;
+        line-height: 40px;
+    }
+/* ----------------Title in sections is above---------------- */    
+ 
+
+    .section-skills__list{
+        padding-left: 0;
+        padding-top: 39px;
+        justify-content: space-evenly;
+        column-gap: 0px;
+    }
+
+    .section-skills__item{
+        width: 280px;
+    }
+
+    .section-skills__item-header{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .section-skills__item-paragraph{
+        font-size: 18px;
+        line-height: 22px;
+        width: 100%
+    }
+
+
+
+
+/* ------------------section__skills is above----------------- */
+
+/* ------------------section__portfolio is below----------------- */
+
+    .section-portfolio{
+        padding-top: 139px;
+     }
+
+     .section-portfolio__container-buttons{
+        margin-top: 70px;
+    }
+
+
+/* ------------------section__portfolio is above----------------- */
+
+/* ------------------section__video is below----------------- */
+
+    .section-video{
+        padding-top: 100px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-video__container-video{
+        overflow: hidden;
+        margin-top: 70px;
+    }
+    .section-video__main-play{
+
+        width: 64.62px;
+        height: 64.62px;
+        background-size: 100% 100%;
+    }
+/* ------------------section__video is below----------------- */
+/* ------------------section__price is below----------------- */
+
+
+
+/* ------------------section__price is below----------------- */
 }
