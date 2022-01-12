@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+        <header class="header">
+            <div class="container container-header">
+                <div class="logo"></div>
+                <nav class="menu">
+                    <ul class = "menu__list">
+                        <li class = "menu__item"><a href="#skills">Skills</a></li>
+                        <li class = "menu__item"><a href="#portfolio">Portfolio</a></li>
+                        <li class = "menu__item"><a href="#video">Video</a></li>
+                        <li class = "menu__item"><a href="#price">Price</a></li>
+                        <li class = "menu__item"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle-language">
+                    <button class="toggle-language__button toggle-language__button-checked">en</button>
+                    <span> / </span>
+                    <button class="toggle-language__button" >ru</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container container-main">
+                <section class="section section__hero" id="hero">
+                    <div class="section__hero-container">
+                        <h1>Alexa Rise</h1>
+                        <p class=section__hero-paragraph>Save sincere emotions,
+                             romantic feelings and happy moments of life together
+                             with professional photographer Alexa Rise</p>
+                        <a href="#contacts" class="section__hero-button big-button">Hire me</a>
+                    </div>
+                </section>
+                <section class="section section-skills" id="skills">
+                    <h2 class="section-title">
+                        <span class="section__before-text"></span>
+                        <span class="section__text">Skills</span>
+                        <span class="section__after-text"></span>
+                    </h2>
+                    <ul class="section-skills__list">
+                        <li class="section-skills__item">
+                            <div class="section-skills__item-icon section-skills__item-icon-camera"></div>
+                            <h4 class="section-skills__item-header">Digital photography</h4>
+                            <p class="section-skills__item-paragraph">High-quality photos 
+                                in the studio and on the nature</p>
+                        </li>
+                        <li class="section-skills__item">
+                            <div class="section-skills__item-icon section-skills__item-icon-video"></div>
+                            <h4 class="section-skills__item-header">Video shooting</h4>
+                            <p class="section-skills__item-paragraph">Capture your moments 
+                                so that they always stay with you</p>
+                        </li>
+                        <li class="section-skills__item">
+                            <div class="section-skills__item-icon section-skills__item-icon-image"></div>
+                            <h4 class="section-skills__item-header">Retouch</h4>
+                            <p class="section-skills__item-paragraph">I strive to make
+                                 photography surpass reality</p>
+                        </li>
+                        <li class="section-skills__item">
+                            <div class="section-skills__item-icon section-skills__item-icon-mic"></div>
+                            <h4 class="section-skills__item-header">Audio</h4>
+                            <p class="section-skills__item-paragraph">Professional sounds
+                                 recording for video, advertising, portfolio</p>
+                        </li>
+                    </ul>
+
+                </section>
+                <section class="section section-portfolio" id="portfolio">
+                    <h2 class="section-title">
+                        <span class="section__before-text"></span>
+                        <span class="section__text">Portfolio</span>
+                        <span class="section__after-text"></span>
+                    </h2>
+                    <div class="section-portfolio__container-buttons">
+                        <button class="section-portfolio__button big-button">Winter</button>
+                        <button class="section-portfolio__button big-button">Spring</button>
+                        <button class="section-portfolio__button big-button">Summer</button>
+                        <button class="section-portfolio__button big-button section-portfolio__button-checked">Autumn</button>
+                    </div>
+                    <div class="section-portfolio__container-img">
+                        <img src="./assets/img/portfolio-img1.jpg" alt="portfolio image" class="section-portfolio__img">
+                        <img src="./assets/img/portfolio-img2.jpg" alt="portfolio image" class="section-portfolio__img">
+                        <img src="./assets/img/portfolio-img3.jpg" alt="portfolio image" class="section-portfolio__img">
+                        <img src="./assets/img/portfolio-img4.jpg" alt="portfolio image" class="section-portfolio__img">
+                        <img src="./assets/img/portfolio-img5.jpg" alt="portfolio image" class="section-portfolio__img">
+                        <img src="./assets/img/portfolio-img6.jpg" alt="portfolio image" class="section-portfolio__img">
+                    </div>
+
+                </section>
+                <section class="section section-video" id="video">
+                    <h2 class="section-title">
+                        <span class="section__before-text"></span>
+                        <span class="section__text">Video</span>
+                        <span class="section__after-text"></span>
+                    </h2>
+                    <div class="section-video__container-video">
+                        <video class="section-video__video" src="./some-video.mp4"
+                        poster="./assets/img/video-poster.jpg"></video>
+                        <div class="section-video__main-play"></div>
+                    </div>
+                </section>
+                <section class="section section-price" id="price">
+                    <h2 class="section-title">
+                        <span class="section__before-text"></span>
+                        <span class="section__text">Price</span>
+                        <span class="section__after-text"></span>
+                    </h2>
+                    <div class="section-price__container-prices">
+                        <div class="price-section__price-item">
+                            <span class="section-price__item-title">Standard</span>
+                            <span class="section-price__item-price">500 $</span>
+                            <span class="section-price__item-text">One location</span>
+                            <span class="section-price__item-text">120 photos in color</span>
+                            <span class="section-price__item-text">12 photos in retouch</span>
+                            <span class="section-price__item-text">Readiness 2-3 weeks</span>
+                            <span class="section-price__item-text">Make up, visage</span>
+                            <button class = "section-price__item-button big-button">Order shooting</button>
+                        </div>
+                        <div class="price-section__price-item">
+                            <span class="section-price__item-title">Premium</span>
+                            <span class="section-price__item-price">700 $</span>
+                            <span class="section-price__item-text">One or two locations</span>
+                            <span class="section-price__item-text">200 photos in color</span>
+                            <span class="section-price__item-text">20 photos in retouch</span>
+                            <span class="section-price__item-text">Readiness 1-2 weeks</span>
+                            <span class="section-price__item-text">Make up, visage</span>
+                            <button class = "section-price__item-button big-button">Order shooting</button>
+                        </div>
+                        <div class="price-section__price-item">
+                            <span class="section-price__item-title">Gold</span>
+                            <span class="section-price__item-price">1000 $</span>
+                            <span class="section-price__item-text">Three locations or more</span>
+                            <span class="section-price__item-text">300 photos in color</span>
+                            <span class="section-price__item-text">50 photos in retouch</span>
+                            <span class="section-price__item-text">Readiness 1 week</span>
+                            <span class="section-price__item-text">Make up, visage, hairstyle</span>
+                            <button class = "section-price__item-button big-button">Order shooting</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-contacts" id="contacts">
+                    <h2 class="section-contacts__title">Contact me</h2>
+                    <form class="section-contacts__form " action="mailto:neyasut87@rambler.ru" enctype="text/plain">
+                        <input class="section-contacts__form-email" type="email" name="email" id="email" placeholder="E-mail">
+                        <input class="section-contacts__form-email" type="tel" name="phone" id="phone" placeholder="Phone">
+                        <textarea class="section-contacts__form-message" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button class="section-contacts__form-button big-button" type="submit">Send message</button>
+                    </form>
+                </section>
+             </div>
+        </main>
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-container__github">
+                    <span>©</span>
+                    <span>2022</span>
+                    <a class="footer-container__github-link" href="https://github.com/NikitaKakurin">github</a>
+                </div>
+                <a class="footer-container__rsschool-link" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+                <ul class="footer-container__social-list">
+                    <li class="footer-container__social-item"><a class="footer-container__social-icon footer-container__social-icon-instagram" href="https://www.instagram.com/"></a></li>
+                    <li class="footer-container__social-item"><a class="footer-container__social-icon footer-container__social-icon-facebook" href="https://ru-ru.facebook.com/"></a></li>
+                    <li class="footer-container__social-item"><a class="footer-container__social-icon footer-container__social-icon-twitter" href="https://twitter.com/"></a></li>
+                    <li class="footer-container__social-item"><a class="footer-container__social-icon footer-container__social-icon-pinterest" href="https://www.pinterest.ru/"></a></li>
+                </ul>
+            </div>
+        </footer>
+        
+    <script src="./js/index.js"></script>
+</body>
+</html>
