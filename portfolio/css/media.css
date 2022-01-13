@@ -129,7 +129,9 @@
         width: 100%
     }
 
-
+    .section-skills__item:nth-child(2n){
+        padding-right: 5px;
+    }
 
 
 /* ------------------section__skills is above----------------- */
@@ -165,10 +167,201 @@
         height: 64.62px;
         background-size: 100% 100%;
     }
-/* ------------------section__video is below----------------- */
-/* ------------------section__price is below----------------- */
-
-
+/* ------------------section__video is above----------------- */
 
 /* ------------------section__price is below----------------- */
+
+.section-price{
+    padding-top: 102px ;
+    padding-bottom: 79px;
+}
+
+.section-price__container-prices{
+    margin-top:  70px; 
+    gap: 50px;
+}
+
+.price-section__price-item{
+    width: 420px;
+}
+
+/* ------------------section__price is above----------------- */
+
+/* ------------------section__contacts is below----------------- */
+
+.section-contacts{
+    padding-top: 32px;
+    padding-right: 4px ;
+    height: 600px;
+    background-size: auto 600px;
+    background-position: 50% center;
+}
+
+.section-contacts__title{
+    margin-right: auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.section-contacts__form{
+    margin-right: auto;
+}
+
+.section-contacts__form-button{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+} 
+/* ------------------section__contacts is above----------------- */
+
+/* ------------------section__footer is above----------------- */
+
+.footer-container{
+    height: 190px;
+    padding-right: 24px;
+    margin: 0;
+    flex-direction: column; 
+    justify-content: start;
+    align-items: center;
+    padding-top: 18px;
+    padding-bottom: 0;
+   }
+.footer-container__github{
+	padding-left: 0;
+	gap: 22px;
+    line-height: 40px;
+}
+
+.footer-container__rsschool-link{
+    line-height: 40px;
+	padding-left: 0px;
+	text-align: right;
+    margin-bottom: 21px;
+}
+/* ------------------section__footer is above----------------- */
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media (max-width:700px) {
+/* ------------------Header is below----------------- */    
+    .header{
+        background-position: -30px -60px; 
+        background-size: auto 530px;
+    }
+
+/* ------------------Header is above----------------- */
+
+/* ------------------section__hero is below----------------- */
+
+
+    .section__hero-container{
+        height: 500px;
+        background-position: -30px -150px;
+        background-size: auto 530px;
+    }
+
+    h1{ 
+        font-size: 28px;
+        line-height: 56px;
+    }
+
+    .section__hero-paragraph{
+        font-size: 16px;
+        line-height: 20px;
+        width: 250px;
+        
+    }
+/* ------------------section__hero is above----------------- */
+}
+
+@media (max-width:575px) {
+    /* ------------------Header is below----------------- */    
+        .header{
+            background-position: center -40px; 
+            background-size: auto 430px;
+        }
+    
+    /* ------------------Header is above----------------- */
+    
+    /* ------------------section__hero is below----------------- */
+    
+        .section__hero{
+            height: 600px;
+        }
+
+        .section__hero-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 400px;
+            padding-top: 320px;
+            padding-left: 0;
+            background-position: center -130px;
+            background-size: auto 430px;
+        }
+    
+        h1{ 
+            font-size: 28px;
+            line-height: 56px;
+        }
+    
+        .section__hero-paragraph{
+            font-size: 18px;
+            line-height: 36px;
+            text-align: center;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            margin-left: auto;margin-right: auto;
+            
+        }
+    /* ------------------section__hero is above----------------- */
+    }
+
+@media (max-width:451px) {
+    .section__title{
+        width: 90%;
+    }
+    .section__after-text,
+    .section__before-text{
+        width: 120px;
+    }
+
+    /* ------------------section__portfolio is below----------------- */
+    .section-portfolio__container-buttons{
+        width: 100%;
+        gap: 20px
+    }
+    .section-portfolio__img{
+        width: 100%;
+    }
+     /* ------------------section__portfolio is above----------------- */
+ 
+ 
+ /* ------------------section__price is below----------------- */
+     .price-section__price-item{
+    max-width: 450px;
+    }
+ /* ------------------section__price is above----------------- */
+ 
+ /* ------------------section__contacts is below----------------- */
+     .section-contacts{
+        padding-right: 0 ;
+        height: auto;
+    }
+ 
+    .section-contacts__title{
+        width: 90%;
+    }
+
+
+    .section-contacts__form{
+        width: 90%;
+    }
+/* ------------------section__contacts is above----------------- */
+
+
 }
