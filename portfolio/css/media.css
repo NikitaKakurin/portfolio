@@ -17,16 +17,19 @@
 @media (max-width:768px) {
 
 /* ------------------Header is below----------------- */
+    menu{
+        overflow: hidden;
+    }
 
     .burger-button{
         display: flex;
     }
 
     .menu__list{
-        display: none;
+        
         position: absolute;
         top:0;
-        right: -680px;
+        right: -660px;
         width: 620px;
         height: 1024px;
         padding-left: 127px;
@@ -37,12 +40,17 @@
         line-height: 73px;
         letter-spacing: 0em;
         background-color: var(--dark-color);
-        transition: all 1s;
+        transition: all 0.5s;
     }
 
     .container-header{
+        overflow: hidden;
         padding-left: 60px;
         padding-right: 64px;
+    }
+
+    body{
+        overflow: hidden;
     }
 
     .toggle-language{
@@ -362,6 +370,4 @@
         width: 90%;
     }
 /* ------------------section__contacts is above----------------- */
-
-
 }

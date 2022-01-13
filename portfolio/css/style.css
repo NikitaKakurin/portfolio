@@ -134,6 +134,7 @@ body {
     margin-bottom: 0;
     margin-right: 33px;
     text-align: start;
+    transition: all 1s;
 }
 
 .menu__item a{
@@ -183,13 +184,28 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 20px;
-
+    
 }
 
 .burger-button__line{
     width: 50px;
     height: 3px;
     background-color: var(--main-text-color);
+    transition: all 0.3s;
+}
+.burger-button__line-first{
+    width: 70.71px;
+    transform: rotate(-45deg);
+}
+
+.burger-button__line-second{
+    display: none;
+}
+
+.burger-button__line-third{
+    width: 70.71px;
+    transform: translateY(-12px) rotate(45deg);
+        
 }
 
 /* ------------------Header is above----------------- */

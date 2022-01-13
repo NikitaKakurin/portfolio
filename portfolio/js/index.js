@@ -1,15 +1,65 @@
 "use strict"
 
 const video = document.querySelector(".section-video__video");
+const burgerButton = document.querySelector(".burger-button")
+const burgerButtonLines = document.querySelectorAll(".burger-button div");
+const menu = document.querySelector(".menu__list");
+let isMenuOpen = false;
 let isTablet;
 let currentSize;
+
+document.addEventListener("click", handlerClick)
+function handlerClick(event){
+    const target = event.target;
+    if(burgerButton.contains(target)){
+        handleClickOnBurgerButton(event);
+    }
+}
+
+function handleClickOnBurgerButton(event){
+    changeBurgerButton();
+   
+    if(isMenuOpen){
+        closeMenu()
+    }else{
+        showMenu()
+    }
+    
+};
+
+function showMenu(){
+    isMenuOpen = true;
+    menu.style.right = "-30px";
+}
+
+function closeMenu(){
+    isMenuOpen = false;
+    menu.style.right = "-660px";
+}
+
+function changeBurgerButton() {
+    burgerButtonLines.forEach((elem, index)=>{
+        switch (index){
+            case 0:
+                elem.classList.toggle("burger-button__line-first");
+                break;
+            case 1:
+                elem.classList.toggle("burger-button__line-second");
+                break;
+            case 2:
+                elem.classList.toggle("burger-button__line-third");
+                break;
+        }
+    });
+}
+
+
 window.onresize = function handler(event) {
     currentSize = document.documentElement.clientWidth<=768;
     if(isTablet!==(currentSize))ChangePoster(currentSize);
 }
-function ChangePoster(format) {
-    console.log(document.documentElement.clientWidth)
-    if(format){
+function ChangePoster(isFormatTablet) {
+    if(isFormatTablet){
         video.poster="./assets/img/video-player-mini.jpg";
         isTablet = true;
     }else{
@@ -17,6 +67,9 @@ function ChangePoster(format) {
         isTablet = false;
     }
 }
+
+
+
 ChangePoster(document.documentElement.clientWidth<=768);
 // console.log(`Ваша оценка - 110 баллов \n
 // Отзыв по пунктам ТЗ:\n
