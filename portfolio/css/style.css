@@ -12,6 +12,8 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
 *{
     box-sizing: border-box;
 }
@@ -26,6 +28,14 @@ body {
     font-size: 20px;
   }
 
+  .container-body{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--dark-color);
+}
   h1{
     margin: 0;
     font-family: "Merriweather", serif;
@@ -95,7 +105,6 @@ body {
 
 /* ------------------Header is below----------------- */
 .header{
-    position: relative;
     height: 90px;
     background-image: url("../assets/img/header-bg.jpg");
     background-repeat: no-repeat;
@@ -134,7 +143,6 @@ body {
     margin-bottom: 0;
     margin-right: 33px;
     text-align: start;
-    transition: all 1s;
 }
 
 .menu__item a{
@@ -169,10 +177,26 @@ body {
     border: none;
     color: var(--main-text-color);
 	cursor: pointer;
+    transition: all .3s;
+}
+
+.toggle-language__button:hover{
+    transform: scale(120%);
 }
 
 .toggle-language__button-checked{
     color: var(--active-text-color);
+}
+
+.burger-background{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 11;
 }
 
 .burger-button{
@@ -184,7 +208,11 @@ body {
     width: 50px;
     height: 50px;
     margin-left: 20px;
-    
+    cursor: pointer;
+}
+
+.burger-button:hover .burger-button__line{
+    background-color: var(--active-text-color);
 }
 
 .burger-button__line{
@@ -192,10 +220,12 @@ body {
     height: 3px;
     background-color: var(--main-text-color);
     transition: all 0.3s;
+    z-index: 13;
 }
 .burger-button__line-first{
-    width: 70.71px;
-    transform: rotate(-45deg);
+    width: 60px;
+    height: 2px;
+    transform: translateY(6px) rotate(-45deg);
 }
 
 .burger-button__line-second{
@@ -203,8 +233,9 @@ body {
 }
 
 .burger-button__line-third{
-    width: 70.71px;
-    transform: translateY(-12px) rotate(45deg);
+    width: 60px;
+    height: 2px;
+    transform: translateY(-6px) rotate(45deg);
         
 }
 
@@ -388,7 +419,7 @@ body {
     background-position: 0 center ;
     width: 130px;
     height: 130px;
-    z-index: 100;
+    z-index: 10;
     transition: all .5s;
 	cursor: pointer;
 }

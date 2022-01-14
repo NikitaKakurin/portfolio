@@ -17,23 +17,28 @@
 @media (max-width:768px) {
 
 /* ------------------Header is below----------------- */
-    menu{
-        overflow: hidden;
+    .header{
+        background-position: -5px -30px; 
+        background-size: auto 620px;
     }
+
 
     .burger-button{
         display: flex;
+        transform: rotate(360deg);
+        z-index: 13;
     }
 
     .menu__list{
-        
         position: absolute;
+        z-index: 12;
         top:0;
-        right: -660px;
+        right: -620px;
         width: 620px;
         height: 1024px;
         padding-left: 127px;
         padding-top: 134px;
+        margin: 0;
         flex-direction: column;
         gap: 16px; 
         font-size: 35px;
@@ -44,14 +49,10 @@
     }
 
     .container-header{
-        overflow: hidden;
         padding-left: 60px;
         padding-right: 64px;
     }
 
-    body{
-        overflow: hidden;
-    }
 
     .toggle-language{
         gap: 10px;
@@ -61,10 +62,7 @@
         padding-left: 10px;
     }
 
-    .header{
-        background-position: -5px -30px; 
-        background-size: auto 620px;
-    }
+
 
 /* ------------------Header is above----------------- */
 
@@ -260,6 +258,13 @@
         background-size: auto 530px;
     }
 
+    .menu__list{
+        right: -80.73vw;
+        width: 80.73vw;
+        height: 1024px;
+        padding-left: 127px;
+        padding-top: 134px;
+    }
 /* ------------------Header is above----------------- */
 
 /* ------------------section__hero is below----------------- */
@@ -291,7 +296,7 @@
             background-position: center -40px; 
             background-size: auto 430px;
         }
-    
+
     /* ------------------Header is above----------------- */
     
     /* ------------------section__hero is below----------------- */
@@ -327,47 +332,80 @@
             
         }
     /* ------------------section__hero is above----------------- */
+}
+
+
+@media (max-width:515px) {
+/* ------------------section__portfolio is below----------------- */
+    .section-portfolio__img{
+        width: 100%;
     }
 
+    .section-portfolio__container-img{
+        width: 100%;
+    }
+
+    .section-portfolio__container-buttons{
+        width: 100%;
+        gap: 20px
+    }
+/* ------------------section__portfolio is above----------------- */
+
+/* ------------------section__contacts is below----------------- */
+    .section-contacts__title{
+        width: 90%;
+    }
+    .section-contacts__form{
+        width: 90%;
+    }
+/* ------------------section__contacts is above----------------- */
+}
+
 @media (max-width:451px) {
+    .menu__list{
+        padding-left: 27px;
+        padding-top: 34px;
+    }
+
     .section__title{
         width: 90%;
     }
     .section__after-text,
     .section__before-text{
-        width: 120px;
+        width: 100%;
     }
 
     /* ------------------section__portfolio is below----------------- */
+    .section-portfolio{
+        padding-top: 70px;
+    }
+    
     .section-portfolio__container-buttons{
         width: 100%;
         gap: 20px
     }
-    .section-portfolio__img{
-        width: 100%;
-    }
-     /* ------------------section__portfolio is above----------------- */
+
+/* ------------------section__portfolio is above----------------- */
  
  
  /* ------------------section__price is below----------------- */
      .price-section__price-item{
-    max-width: 450px;
+        width: 90%;
     }
  /* ------------------section__price is above----------------- */
  
  /* ------------------section__contacts is below----------------- */
      .section-contacts{
-        padding-right: 0 ;
+        padding-bottom: 70px;
+        padding-right: 0;
         height: auto;
     }
- 
-    .section-contacts__title{
-        width: 90%;
-    }
-
-
-    .section-contacts__form{
-        width: 90%;
-    }
 /* ------------------section__contacts is above----------------- */
+}
+
+@media (max-width:355px) {
+    .container-header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

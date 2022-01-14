@@ -4,50 +4,66 @@ const video = document.querySelector(".section-video__video");
 const burgerButton = document.querySelector(".burger-button")
 const burgerButtonLines = document.querySelectorAll(".burger-button div");
 const menu = document.querySelector(".menu__list");
+const burgerBackground = document.querySelector(".burger-background");
 let isMenuOpen = false;
 let isTablet;
-let currentSize;
-
+let currentSizeMenu = menu.clientWidth;
+let isCurrentSizeTablet;
 document.addEventListener("click", handlerClick)
 function handlerClick(event){
     const target = event.target;
-    if(burgerButton.contains(target)){
+    if(burgerButton.contains(target) || burgerButton === target){
         handleClickOnBurgerButton(event);
+    }else if((menu.contains(target) && 
+              target.tagName === "A") ||
+              burgerBackground ===target){
+        if(isMenuOpen){
+            closeMenu();
+        }
     }
 }
 
 function handleClickOnBurgerButton(event){
-    changeBurgerButton();
-   
     if(isMenuOpen){
-        closeMenu()
+        closeMenu();
     }else{
-        showMenu()
+        openMenu();
     }
     
 };
 
-function showMenu(){
+function openMenu(){
+    changeBurgerButton({isToOpen:true});    
     isMenuOpen = true;
-    menu.style.right = "-30px";
+    menu.style.right = "0px";
+    burgerBackground.style.display= "block";
 }
 
 function closeMenu(){
+    currentSizeMenu = menu.clientWidth;
+    changeBurgerButton({isToOpen:false});
     isMenuOpen = false;
-    menu.style.right = "-660px";
+    menu.style.right = -currentSizeMenu+"px";
+    burgerBackground.style.display= "none";
 }
 
-function changeBurgerButton() {
+function changeBurgerButton({isToOpen}) {
     burgerButtonLines.forEach((elem, index)=>{
+        let fun;
+        if(isToOpen){
+            fun = "add";
+        } else{
+            fun = "remove";
+        }
         switch (index){
             case 0:
-                elem.classList.toggle("burger-button__line-first");
+                elem.classList[fun]("burger-button__line-first");
                 break;
             case 1:
-                elem.classList.toggle("burger-button__line-second");
+                elem.classList[fun]("burger-button__line-second");
                 break;
             case 2:
-                elem.classList.toggle("burger-button__line-third");
+                elem.classList[fun]("burger-button__line-third");
                 break;
         }
     });
@@ -55,8 +71,18 @@ function changeBurgerButton() {
 
 
 window.onresize = function handler(event) {
-    currentSize = document.documentElement.clientWidth<=768;
-    if(isTablet!==(currentSize))ChangePoster(currentSize);
+    isCurrentSizeTablet = document.documentElement.clientWidth<=768;
+    if(isTablet!==(isCurrentSizeTablet)){
+        ChangePoster(isCurrentSizeTablet);
+        if(isMenuOpen){
+            closeMenu();
+        }
+    }
+    if(isTablet){
+        if(isMenuOpen){
+            closeMenu();
+        }
+    }
 }
 function ChangePoster(isFormatTablet) {
     if(isFormatTablet){
