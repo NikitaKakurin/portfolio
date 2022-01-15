@@ -16,7 +16,7 @@ function handlerClick(event){
         handleClickOnBurgerButton(event);
     }else if((menu.contains(target) && 
               target.tagName === "A") ||
-              burgerBackground ===target){
+              burgerBackground === target){
         if(isMenuOpen){
             closeMenu();
         }
@@ -74,10 +74,12 @@ window.onresize = function handler(event) {
     isCurrentSizeTablet = document.documentElement.clientWidth<=768;
     if(isTablet!==(isCurrentSizeTablet)){
         ChangePoster(isCurrentSizeTablet);
+    
         if(isMenuOpen){
             closeMenu();
         }
     }
+    
     if(isTablet){
         if(isMenuOpen){
             closeMenu();
@@ -85,9 +87,9 @@ window.onresize = function handler(event) {
             currentSizeMenu = menu.clientWidth;
             menu.style.right = -currentSizeMenu+"px";
         }
-
     }
 }
+
 function ChangePoster(isFormatTablet) {
     if(isFormatTablet){
         video.poster="./assets/img/video-player-mini.jpg";
