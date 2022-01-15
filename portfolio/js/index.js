@@ -81,7 +81,11 @@ window.onresize = function handler(event) {
     if(isTablet){
         if(isMenuOpen){
             closeMenu();
+        }else{
+            currentSizeMenu = menu.clientWidth;
+            menu.style.right = -currentSizeMenu+"px";
         }
+
     }
 }
 function ChangePoster(isFormatTablet) {

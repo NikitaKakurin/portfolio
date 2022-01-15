@@ -45,7 +45,7 @@
         line-height: 73px;
         letter-spacing: 0em;
         background-color: var(--dark-color);
-        transition: all 0.5s;
+        transition: right 0.5s;
     }
 
     .container-header{
