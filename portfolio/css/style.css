@@ -251,7 +251,7 @@ body {
     background-repeat: no-repeat;
     background-position: center -90px;
 }
-.section__hero-paragraph{
+.section__hero-text{
     margin-top: 10px;
     margin-bottom: 25px;
     width: 470px;
@@ -325,7 +325,7 @@ body {
     background-image: url("../assets/svg/mic.svg");
 }
 
-.section-skills__item-header{
+.section-skills__item-title{
     margin-top: 50px;
     margin-bottom: 21px;
     line-height: 2rem;
@@ -334,7 +334,7 @@ body {
     color: var(--main-text-color);
 }
 
-.section-skills__item-paragraph{
+.section-skills__item-text{
     margin: 0 auto;
     width: 280px;
     height: 72px;
