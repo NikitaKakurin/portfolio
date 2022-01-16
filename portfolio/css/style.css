@@ -184,7 +184,7 @@ body {
     color: var(--active-text-color);
 }
 
-.toggle-language__button-checked{
+.toggle-language__button-active{
     color: var(--active-text-color);
 }
 
@@ -375,7 +375,7 @@ body {
     color: var(--main-text-color);
 }
 
-.section-portfolio__button-checked{
+.section-portfolio__button-active{
     background-color: var(--active-text-color);
     color: var(--dark-color);
 }

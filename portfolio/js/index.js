@@ -1,10 +1,14 @@
 "use strict"
 
+import i18Obj from "./translate.js";
+import changeLanguage from "./i18n.js";
+
 const video = document.querySelector(".section-video__video");
-const burgerButton = document.querySelector(".burger-button")
+const burgerButton = document.querySelector(".burger-button");
 const burgerButtonLines = document.querySelectorAll(".burger-button div");
 const menu = document.querySelector(".menu__list");
 const burgerBackground = document.querySelector(".burger-background");
+const languageButtons = document.querySelectorAll("[data-lang]");
 let isMenuOpen = false;
 let isTablet;
 let currentSizeMenu = menu.clientWidth;
@@ -21,6 +25,20 @@ function handlerClick(event){
             closeMenu();
         }
     }
+
+    if(event.target.dataset.lang){
+        let target = event.target;
+        changeLanguage(i18Obj[target.dataset.lang]);
+        toggleClassActive(target);
+    };
+
+    function toggleClassActive(target){        
+        languageButtons.forEach(elem=>{
+            elem.classList.remove("toggle-language__button-active")
+        })
+        target.classList.add("toggle-language__button-active");
+    }
+
 }
 
 function handleClickOnBurgerButton(event){
