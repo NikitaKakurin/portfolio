@@ -181,7 +181,7 @@ body {
 }
 
 .toggle-language__button:hover{
-    transform: scale(120%);
+    color: var(--active-text-color);
 }
 
 .toggle-language__button-checked{
