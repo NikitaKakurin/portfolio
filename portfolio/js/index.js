@@ -26,8 +26,7 @@ function handlerClick(event){
         }
     }
 
-    if(event.target.dataset.lang){
-        let target = event.target;
+    if(target.dataset.lang){
         changeLanguage(i18Obj[target.dataset.lang]);
         toggleClassActive(target);
     };
