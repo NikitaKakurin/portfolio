@@ -5,7 +5,6 @@ function changeLanguage(langObj) {
     AllElements.forEach(elem=>{
         elem.innerText = langObj[elem.dataset.i18]
     })
-    
 }
 
 export default changeLanguage;

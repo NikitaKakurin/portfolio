@@ -368,7 +368,7 @@ body {
     background-color: var(--dark-color);
     border: 2px solid var(--active-text-color);
     color: var(--active-text-color);
-    transition: color 0.5s;
+    transition: color 0.5s, background-color 1s;
 }
 
 .section-portfolio__button:hover{
@@ -390,6 +390,7 @@ body {
 .section-portfolio__img{
     max-width: 450px;
     height: auto;
+    transition: opacity 0.5s ease-in;
 }
 /* ------------------section__portfolio is above----------------- */
 

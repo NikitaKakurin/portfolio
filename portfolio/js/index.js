@@ -2,6 +2,8 @@
 
 import i18Obj from "./translate.js";
 import changeLanguage from "./i18n.js";
+import { changeImages } from "./portfolioChangeImg.js";
+import { preloadImages } from "./preloadImagesPortfolio.js";
 
 const video = document.querySelector(".section-video__video");
 const burgerButton = document.querySelector(".burger-button");
@@ -9,6 +11,8 @@ const burgerButtonLines = document.querySelectorAll(".burger-button div");
 const menu = document.querySelector(".menu__list");
 const burgerBackground = document.querySelector(".burger-background");
 const languageButtons = document.querySelectorAll("[data-lang]");
+const portfolioButtons = document.querySelectorAll("[data-season]");
+
 let isMenuOpen = false;
 let isTablet;
 let currentSizeMenu = menu.clientWidth;
@@ -18,6 +22,7 @@ function handlerClick(event){
     const target = event.target;
     if(burgerButton.contains(target) || burgerButton === target){
         handleClickOnBurgerButton(event);
+        return;
     }else if((menu.contains(target) && 
               target.tagName === "A") ||
               burgerBackground === target){
@@ -28,14 +33,26 @@ function handlerClick(event){
 
     if(target.dataset.lang){
         changeLanguage(i18Obj[target.dataset.lang]);
-        toggleClassActive(target);
+        toggleClassActive(target, "toggle-language__button-active", languageButtons);
+        return;
     };
 
-    function toggleClassActive(target){        
-        languageButtons.forEach(elem=>{
-            elem.classList.remove("toggle-language__button-active")
+    if(target.dataset.season){
+        if(target.classList.contains("section-portfolio__button-active")){
+            return;
+        }
+        changeImages(target)
+
+        toggleClassActive(target, "section-portfolio__button-active", portfolioButtons);
+        return;        
+    }
+
+
+    function toggleClassActive(target, nameOfClass, arrayOfElements){        
+        arrayOfElements.forEach(elem=>{
+            elem.classList.remove(nameOfClass)
         })
-        target.classList.add("toggle-language__button-active");
+        target.classList.add(nameOfClass);
     }
 
 }
@@ -118,7 +135,7 @@ function ChangePoster(isFormatTablet) {
 }
 
 ChangePoster(document.documentElement.clientWidth<=768);
-
+preloadImages(["summer", "winter", "spring"]);
 
 console.log(
     `Ваша отметка - 85 балла(ов)\n
