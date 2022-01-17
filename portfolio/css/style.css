@@ -117,6 +117,7 @@ body {
     justify-content: center;
     height: 90px;
     align-items: center;
+    
 }
 
 .logo {
@@ -141,7 +142,7 @@ body {
     gap: 31px;
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 33px;
+    margin-right: 41px;
     text-align: start;
 }
 
@@ -162,6 +163,7 @@ body {
     align-items: center;
     font-weight: 700;
     color: var(--main-text-color);
+    margin-right: 38px;
 }
 .toggle-language__button{
 	padding: 0;
@@ -178,6 +180,7 @@ body {
     color: var(--main-text-color);
 	cursor: pointer;
     transition: all .3s;
+    text-transform: uppercase;
 }
 
 .toggle-language__button:hover{
@@ -238,6 +241,20 @@ body {
     transform: translateY(-6px) rotate(45deg);
         
 }
+
+.toggle-color-theme__button{
+    border: none;
+    width: 45px;
+    height: 45px;
+    background: url("../assets/svg/sun-icon.svg");
+    cursor: pointer;
+}
+
+.toggle-color-theme__button:hover{
+    filter: var(--filter-icon);
+}
+
+
 
 /* ------------------Header is above----------------- */
 
