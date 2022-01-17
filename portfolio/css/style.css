@@ -106,7 +106,7 @@ body {
 /* ------------------Header is below----------------- */
 .header{
     height: 90px;
-    background-image: url("../assets/img/header-bg.jpg");
+    background-image: url("../assets/img/dark-theme/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
 }
@@ -247,7 +247,7 @@ body {
     margin-top: 0;
 	padding-top: 160px;
     padding-left: 80px;
-	background-image: url("../assets/img/header-bg.jpg");
+    background-image: url("../assets/img/dark-theme/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center -90px;
 }
@@ -508,7 +508,7 @@ body {
 /* ------------------section__contacts is below----------------- */
 
 .section-contacts{
-    background-image: url("../assets/img/contacts-bg.jpg");
+    background-image: url("../assets/img/dark-theme/contacts-bg.jpg");
     padding-top: 27px;
     padding-right: 20px ;
     height: 700px;
