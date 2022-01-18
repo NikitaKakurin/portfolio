@@ -10,6 +10,10 @@
 
 html{
     scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 
@@ -22,10 +26,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-	font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
   }
 
   .container-body{
@@ -106,9 +106,16 @@ body {
 /* ------------------Header is below----------------- */
 .header{
     height: 90px;
-    background-image: url("../assets/img/dark-theme/header-bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
+}
+
+.header[data-theme = "dark-theme"]{
+    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
+}
+
+.header[data-theme = "white-theme"]{
+    background-image: url("../assets/img/white-theme/hero-bg.jpg");
 }
 
 .container-header{
@@ -246,8 +253,16 @@ body {
     border: none;
     width: 45px;
     height: 45px;
-    background: url("../assets/svg/sun-icon.svg");
     cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.toggle-color-theme__button[data-theme = "white-theme"]{
+    background: url("../assets/svg/sun-icon.svg");
+}
+.toggle-color-theme__button[data-theme = "dark-theme"]{
+    background: url("../assets/svg/moon-icon.svg");
 }
 
 .toggle-color-theme__button:hover{
@@ -264,10 +279,19 @@ body {
     margin-top: 0;
 	padding-top: 160px;
     padding-left: 80px;
-    background-image: url("../assets/img/dark-theme/header-bg.jpg");
+    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
     background-repeat: no-repeat;
     background-position: center -90px;
 }
+
+.section__hero-container[data-theme = "dark-theme"]{
+    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
+}
+
+.section__hero-container[data-theme = "white-theme"]{
+    background-image: url("../assets/img/white-theme/hero-bg.jpg");
+}
+
 .section__hero-text{
     margin-top: 10px;
     margin-bottom: 25px;
@@ -525,10 +549,17 @@ body {
 /* ------------------section__contacts is below----------------- */
 
 .section-contacts{
-    background-image: url("../assets/img/dark-theme/contacts-bg.jpg");
     padding-top: 27px;
     padding-right: 20px ;
     height: 700px;
+}
+
+.section-contacts[data-theme = "dark-theme"]{
+    background-image: url("../assets/img/dark-theme/contacts-bg.jpg");
+}
+
+.section-contacts[data-theme = "white-theme"]{
+    background-image: url("../assets/img/white-theme/contacts-bg.jpg");
 }
 
 .section-contacts__title{
@@ -618,14 +649,14 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 150px;
-	font-family: Inter;
+	font-family: "Inter", sans-serif;
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 2.5rem;
 	letter-spacing: 0em;
 	text-align: left;
-    background-color: var(--dark-color);
+    background-color: #000000;
     color: var(--main-text-color);
 	padding-left: 20px;
 	padding-right: 20px;
