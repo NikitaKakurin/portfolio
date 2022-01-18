@@ -4,6 +4,7 @@ import i18Obj from "./translate.js";
 import changeLanguage from "./i18n.js";
 import { changeImages } from "./portfolioChangeImg.js";
 import { preloadImages } from "./preloadImagesPortfolio.js";
+import { changeColorTheme } from "./changeColorTheme.js";
 
 const video = document.querySelector(".section-video__video");
 const burgerButton = document.querySelector(".burger-button");
@@ -46,6 +47,15 @@ function handlerClick(event){
         toggleClassActive(target, "section-portfolio__button-active", portfolioButtons);
         return;        
     }
+
+    if(target.dataset.theme){
+        changeColorTheme(target);
+        return;
+
+
+    }
+
+
 
 
     function toggleClassActive(target, nameOfClass, arrayOfElements){        
