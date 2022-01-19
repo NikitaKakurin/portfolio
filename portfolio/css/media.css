@@ -14,19 +14,12 @@
 
 }
 
-@media (max-width:768px) {
+@media (max-width:800px) {
 
 /* ------------------Header is below----------------- */
     .header{
         background-position: -5px -30px; 
         background-size: auto 620px;
-    }
-
-
-    .burger-button{
-        display: flex;
-        transform: rotate(360deg);
-        z-index: 13;
     }
 
     .menu__list{
@@ -36,16 +29,27 @@
         right: -620px;
         width: 620px;
         height: 1024px;
-        padding-left: 127px;
+        padding-left: 123px;
         padding-top: 134px;
         margin: 0;
         flex-direction: column;
-        gap: 16px; 
-        font-size: 35px;
+        gap: 23px; 
+        font-family: 'Merriweather',serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
         line-height: 73px;
         letter-spacing: 0em;
+        text-align: left;
         background-color: var(--body-color);
         transition: right 0.5s;
+    }
+
+    .menu__link{
+        color: var(--burger-menu-link-color);
+    }
+    .menu__link:hover{
+        color: var(--burger-menu-link-color-hover);
     }
 
     .container-header{
@@ -53,15 +57,21 @@
         padding-right: 64px;
     }
 
+    .toggle-language__button{
+        padding-left: 0;
+    }
 
     .toggle-language{
-        gap: 10px;
+        gap: 12px;
+        margin-right: 30px;
     }
 
-    .toggle-language__button{
-        padding-left: 10px;
+    .burger-button{
+        display: flex;
+        transform: rotate(360deg);
+        z-index: 13;
+        margin-left: 30px;
     }
-
 
 
 /* ------------------Header is above----------------- */
@@ -331,6 +341,11 @@
             margin-left: auto;margin-right: auto;
             
         }
+
+        .section__hero-button{
+            background-color: var(--active-text-color);
+            
+        }
     /* ------------------section__hero is above----------------- */
 }
 
@@ -362,6 +377,11 @@
 }
 
 @media (max-width:451px) {
+    .container-header{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .menu__list{
         padding-left: 27px;
         padding-top: 34px;
@@ -404,8 +424,12 @@
 }
 
 @media (max-width:355px) {
-    .container-header{
-        padding-left: 10px;
-        padding-right: 10px;
+    .toggle-language{
+        margin-right: 15px;
     }
+    .burger-button{
+        margin-left: 15px;
+    }
+
+
 }

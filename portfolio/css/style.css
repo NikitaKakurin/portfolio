@@ -5,6 +5,9 @@
     --active-text-color:#bdae82;
 	--body-color:#000000;
 
+    --burger-menu-link-color:#bdae82;
+    --burger-menu-link-color-hover:#ffffff;
+
     --hero-bg-img:url("../assets/img/dark-theme/hero-bg.jpg");
     --contacts-bg-img:url("../assets/img/dark-theme/contacts-bg.jpg");
 
@@ -184,14 +187,14 @@ body {
     text-align: start;
 }
 
-.menu__item a{
+.menu__link{
     text-decoration: none;
     line-height: 2rem;
     letter-spacing: 0em;
     color: var(--main-text-color);
     transition: color 0.5s;
 }
-.menu__item a:hover{
+.menu__link:hover{
     color: var(--active-text-color);
 }
 
@@ -236,7 +239,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .3);
     z-index: 11;
 }
 
@@ -401,6 +404,7 @@ body {
 .section-skills__item-title{
     margin-top: 50px;
     margin-bottom: 21px;
+    font-weight: 700;
     line-height: 2rem;
     letter-spacing: 0.02rem;
     text-align: center;

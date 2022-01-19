@@ -13,6 +13,9 @@ export function changeColorTheme(target){
         document.documentElement.style.setProperty('--active-text-color', '#bdae82');
         document.documentElement.style.setProperty('--body-color', '#ffffff');
 
+        document.documentElement.style.setProperty('--burger-menu-link-color', '#1c1c1c');
+        document.documentElement.style.setProperty('--burger-menu-link-color-hover', '#bdae82')
+
         document.documentElement.style.setProperty('--hero-bg-img','url("../assets/img/white-theme/hero-bg.jpg")' )
         document.documentElement.style.setProperty('--contacts-bg-img','url("../assets/img/white-theme/contacts-bg.jpg")' )
 
@@ -48,7 +51,7 @@ export function changeColorTheme(target){
 
         document.documentElement.style.setProperty('--filter-theme-icon',`invert(6%) sepia(10%)
                 saturate(4%) hue-rotate(314deg) brightness(99%) contrast(89%)`);
-        document.documentElement.style.setProperty('--filter-theme-icon-hover',`'invert(82%) sepia(7%)
+        document.documentElement.style.setProperty('--filter-theme-icon-hover',`invert(82%) sepia(7%)
                 saturate(1536%) hue-rotate(7deg) brightness(89%) contrast(77%)`);
 
         document.documentElement.style.setProperty('--filter-icon','invert(100%)');
@@ -60,6 +63,9 @@ export function changeColorTheme(target){
         document.documentElement.style.setProperty('--main-text-color', '');
         document.documentElement.style.setProperty('--active-text-color', '');
         document.documentElement.style.setProperty('--body-color', '');
+
+        document.documentElement.style.setProperty('--burger-menu-link-color', '');
+        document.documentElement.style.setProperty('--burger-menu-link-color-hover', '')
 
         document.documentElement.style.setProperty('--hero-bg-img','' )
         document.documentElement.style.setProperty('--contacts-bg-img','' )
