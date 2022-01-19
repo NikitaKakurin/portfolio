@@ -44,7 +44,7 @@
         font-size: 35px;
         line-height: 73px;
         letter-spacing: 0em;
-        background-color: var(--dark-color);
+        background-color: var(--body-color);
         transition: right 0.5s;
     }
 

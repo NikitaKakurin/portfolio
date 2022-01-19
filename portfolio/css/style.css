@@ -2,10 +2,49 @@
 
 :root{
     --main-text-color:#ffffff;
-    --active-text-color:#BDAE82;
-	--dark-color:#000000;
-	--filter-icon:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    --active-text-color:#bdae82;
+	--body-color:#000000;
+
+    --hero-bg-img:url("../assets/img/dark-theme/hero-bg.jpg");
+    --contacts-bg-img:url("../assets/img/dark-theme/contacts-bg.jpg");
+
+    --btns-hire-contacts-bgcolor:#bdae82;
+    --btns-hire-contacts-color:#000000;
+    --btns-hire-contacts-bgcolor-hover:#bdae82;
+    --btns-hire-contacts-color-hover:#ffffff;
+    --btns-hire-shadow:none;
+
+    --btns-portfolio-bgcolor:#000000;
+    --btns-portfolio-color:#bdae82;
+    --btns-portfolio-color-hover:#ffffff;
+    --btns-portfolio-color-active:#000000;
+    --btns-portfolio-bgcolor-active:#bdae82;
+    --btns-portfolio-color-active-hover:#ffffff;
+
+    --btns-price-color:#000000;
+    --btns-price-bgcolor:#bdae82;
+    --btns-price-color-hover:#ffffff;
+    --btns-price-bgcolor-hover:#bdae82;
+
+    --btns-language-color-hover:#bdae82;
+    --btns-language-color-active:#bdae82;
+
+    --sections-title-color:#bdae82;
+
+    --price-standard-premium-color:#bdae82;
+
+    --contacts-title:#bdae82;
+    --contacts-message-phone-email-bgcolor:rgba(0, 0, 0, .5);
+    --contacts-text-placeholder:#bdae82;
+    --contacts-text-placeholder-hover:#ffffff;
+    
+
+    --filter-icon:none;
+    --filter-theme-icon-hover:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
 	contrast(87%);
+    --filter-icon-hover:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+	contrast(87%);
+    --filter-social-icon-hover:invert(14%) sepia(44%) saturate(303%) hue-rotate(343deg) brightness(85%) contrast(87%);
 }
 
 html{
@@ -26,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--dark-color);
+    background-color: var(--body-color);
   }
 
   .container-body{
@@ -35,7 +74,6 @@ body {
     padding: 0;
     overflow: hidden;
     position: relative;
-    background-color: var(--dark-color);
 }
   h1{
     margin: 0;
@@ -48,15 +86,11 @@ body {
     text-align: left;
     color: var(--main-text-color);
   }
-.section{
-    background-color: var(--dark-color);
-}
 
 .container{
     max-width: 1440px;
     margin: 0 auto;
     padding: 0;
-
 }
 /* -----------------Buttons in sections is below------------------- */
 .big-button{
@@ -70,8 +104,9 @@ body {
     letter-spacing: 0em;
     text-align: center;
 	cursor: pointer;
-	transition: all 0.5s;
+	transition: color 0.5s, background-color 0.5s;
 }
+
 /* -----------------Buttons in sections is above------------------- */
 
 /* ----------------Title in sections is below---------------- */
@@ -91,7 +126,7 @@ body {
     font-weight: 700;
     line-height: 4rem;
     letter-spacing: 0em;
-    color: var(--active-text-color);
+    color: var(--sections-title-color);
 }
 
 .section__before-text,
@@ -99,7 +134,7 @@ body {
     display: block;
     width: 275px;
     height: 2px;
-    background-color: var(--active-text-color);
+    background-color: var(--sections-title-color);
 }
 
 /* ----------------Title in sections is above---------------- */
@@ -109,23 +144,16 @@ body {
     height: 90px;
     background-repeat: no-repeat;
     background-position: center 0;
+    background-image: var(--hero-bg-img);
 }
 
-.header[data-theme = "dark-theme"]{
-    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
-}
-
-.header[data-theme = "white-theme"]{
-    background-image: url("../assets/img/white-theme/hero-bg.jpg");
-}
 
 .container-header{
 	padding: 0 20px;
     display: flex;
     justify-content: center;
     height: 90px;
-    align-items: center;
-    
+    align-items: center;   
 }
 
 .logo {
@@ -136,9 +164,11 @@ body {
     background-repeat: no-repeat; 
 	cursor: pointer; 
     transition: 0.5s;
-  }
-  .logo:hover {
     filter: var(--filter-icon);
+  }
+  
+  .logo:hover {
+    filter: var(--filter-icon-hover);
   }
 
 .menu{
@@ -192,11 +222,11 @@ body {
 }
 
 .toggle-language__button:hover{
-    color: var(--active-text-color);
+    color: var(--btns-language-color-hover);
 }
 
 .toggle-language__button-active{
-    color: var(--active-text-color);
+    color: var(--btns-language-color-active);
 }
 
 .burger-background{
@@ -264,10 +294,16 @@ body {
 }
 .toggle-color-theme__button[data-theme = "dark-theme"]{
     background: url("../assets/svg/moon-icon.svg");
+    background-position: 0px 5px;
+    background-repeat: no-repeat;
 }
 
 .toggle-color-theme__button:hover{
     filter: var(--filter-icon);
+    transition: filter 0.5s;
+}
+.toggle-color-theme__button:hover{
+    filter: var(--filter-theme-icon-hover);
 }
 
 
@@ -280,17 +316,9 @@ body {
     margin-top: 0;
 	padding-top: 160px;
     padding-left: 80px;
-    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
+    background-image: var(--hero-bg-img);
     background-repeat: no-repeat;
     background-position: center -90px;
-}
-
-.section__hero-container[data-theme = "dark-theme"]{
-    background-image: url("../assets/img/dark-theme/hero-bg.jpg");
-}
-
-.section__hero-container[data-theme = "white-theme"]{
-    background-image: url("../assets/img/white-theme/hero-bg.jpg");
 }
 
 .section__hero-text{
@@ -307,11 +335,14 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--dark-color);
-    background-color: var(--active-text-color);
+    color: var(--btns-hire-contacts-color);
+    background-color: var(--btns-hire-contacts-bgcolor);
+    box-shadow: var(--btns-hire-shadow);
 }
+
 .section__hero-button:hover{
-    color: var(--main-text-color);
+    color: var(--btns-hire-contacts-color-hover);
+    background-color: var(--btns-hire-contacts-bgcolor-hover);
 }
 
 /* ------------------section__hero is above----------------- */
@@ -407,19 +438,24 @@ body {
 }
 
 .section-portfolio__button{
-    background-color: var(--dark-color);
+    background-color: var(--btns-portfolio-bgcolor);
     border: 2px solid var(--active-text-color);
-    color: var(--active-text-color);
+    color: var(--btns-portfolio-color);
     transition: color 0.5s, background-color 1s;
 }
 
 .section-portfolio__button:hover{
-    color: var(--main-text-color);
+    color: var(--btns-portfolio-color-hover);
+    background-color: var(--btns-portfolio-bgcolor-hover);
 }
 
 .section-portfolio__button-active{
-    background-color: var(--active-text-color);
-    color: var(--dark-color);
+    background-color: var(--btns-portfolio-bgcolor-active);
+    color: var(--btns-portfolio-color-active);
+}
+.section-portfolio__button-active:hover{
+    background-color: var(--btns-portfolio-bgcolor-active);
+    color: var(--btns-portfolio-color-hover);
 }
 
 .section-portfolio__container-img{
@@ -468,7 +504,7 @@ body {
 }
 
 .section-video__main-play:hover{
-    filter: var(--filter-icon);
+    filter: var(--filter-icon-hover);
 }
 
 /* ------------------section__video is above----------------- */
@@ -523,6 +559,10 @@ body {
     color: var(--active-text-color);
 }
 
+.section-price__item-price-white-theme{
+    color: var(--price-standard-premium-color);
+}
+
 .section-price__item-text{
     font-size: 0.9rem;
     line-height: 1.8rem;
@@ -536,13 +576,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
-    color: var(--dark-color);
-    background-color: var(--active-text-color);
+    color: var(--btns-price-color);
+    background-color: var(--btns-price-bgcolor);
     border: none;
 }   
 
 .section-price__item-button:hover{
-    color: var(--main-text-color);
+    color: var(--btns-price-color-hover);
+    background-color: var(--btns-price-bgcolor-hover);
 }
 
 /* ------------------section__price is above----------------- */
@@ -553,14 +594,7 @@ body {
     padding-top: 27px;
     padding-right: 20px ;
     height: 700px;
-}
-
-.section-contacts[data-theme = "dark-theme"]{
-    background-image: url("../assets/img/dark-theme/contacts-bg.jpg");
-}
-
-.section-contacts[data-theme = "white-theme"]{
-    background-image: url("../assets/img/white-theme/contacts-bg.jpg");
+    background-image: var(--contacts-bg-img)
 }
 
 .section-contacts__title{
@@ -573,7 +607,7 @@ body {
     line-height: 4rem;
     letter-spacing: 0em;
     width: 450px;
-    color: var(--active-text-color);
+    color: var(--contacts-title);
 }
 .section-contacts__form{
     margin-top: 40px;
@@ -594,11 +628,14 @@ body {
     line-height: 2rem;
     letter-spacing: 0em;
     text-align: left;
-    color: var(--active-text-color);
-    background-color: rgba(0, 0, 0, .5);
+    color: var(--contacts-text-placeholder);
+    background-color: var(--contacts-message-phone-email-bgcolor);
     cursor: pointer;
     border: 2px solid var(--active-text-color);
+    transition: color .5s;
 }
+
+
 
 .section-contacts__form-phone,
 .section-contacts__form-email{
@@ -614,14 +651,17 @@ body {
     font-weight: 400;
     line-height: 2rem;
     letter-spacing: 0em;
-    color: var(--active-text-color);
+    color: var(--contacts-text-placeholder);
 	transition: color .5s;
 }
 
+.section-contacts__form-message:hover,
+.section-contacts__form-phone:hover,
+.section-contacts__form-email:hover,
 .section-contacts__form-message:hover::placeholder,
 .section-contacts__form-phone:hover::placeholder,
 .section-contacts__form-email:hover::placeholder{
-	color: var(--main-text-color);
+	color: var(--contacts-text-placeholder-hover);
 }
 
 .section-contacts__form-message{
@@ -632,13 +672,14 @@ body {
    
 .section-contacts__form-button{
     margin-top: 5px;
-    color: var(--dark-color);
-    background-color: var(--active-text-color);
+    color: var(--btns-hire-contacts-color);
+    background-color: var(--btns-hire-contacts-bgcolor);
     border: none;
 }   
 
 .section-contacts__form-button:hover{
-    color: var(--main-text-color);
+    background-color: var(--btns-hire-contacts-bgcolor-hover);
+    color: var(--btns-hire-contacts-color-hover);
 }
 
 /* ------------------section__contacts is above----------------- */
@@ -657,7 +698,7 @@ body {
 	line-height: 2.5rem;
 	letter-spacing: 0em;
 	text-align: left;
-    background-color: #000000;
+    background-color: var(--body-color);
     color: var(--main-text-color);
 	padding-left: 20px;
 	padding-right: 20px;
@@ -719,6 +760,10 @@ body {
   	background-image: url("../assets/svg/pinterest.svg");
 }
 
-.footer-container__social-icon:hover {
+.footer-container__social-icon {
     filter: var(--filter-icon);
+  }
+
+.footer-container__social-icon:hover {
+    filter: var(--filter-social-icon-hover);
   }
