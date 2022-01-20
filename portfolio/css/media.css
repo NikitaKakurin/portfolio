@@ -35,7 +35,7 @@
         top:0;
         right: -620px;
         width: 620px;
-        height: 1024px;
+        height: 100vh;
         padding-left: 127px;
         padding-top: 134px;
         margin: 0;
@@ -258,13 +258,7 @@
         background-size: auto 530px;
     }
 
-    .menu__list{
-        right: -80.73vw;
-        width: 80.73vw;
-        height: 1024px;
-        padding-left: 127px;
-        padding-top: 134px;
-    }
+
 /* ------------------Header is above----------------- */
 
 /* ------------------section__hero is below----------------- */
@@ -288,6 +282,12 @@
         
     }
 /* ------------------section__hero is above----------------- */
+}
+@media (max-width:620px) {
+    .menu__list{
+        right: -100vw;
+        width: 100vw;
+    }
 }
 
 @media (max-width:575px) {
@@ -362,10 +362,7 @@
 }
 
 @media (max-width:451px) {
-    .menu__list{
-        padding-left: 27px;
-        padding-top: 34px;
-    }
+
 
     .section__title{
         width: 90%;
