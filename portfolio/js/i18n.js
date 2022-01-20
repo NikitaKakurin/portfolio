@@ -1,9 +1,10 @@
 'use strict'
+import i18Obj from "./translate.js";
 
-function changeLanguage(langObj) {
+function changeLanguage(lang) {
     const AllElements = document.querySelectorAll('[data-i18]');
     AllElements.forEach(elem=>{
-        elem.innerText = langObj[elem.dataset.i18]
+        elem.innerText = i18Obj[lang][elem.dataset.i18];
     })
 }
 

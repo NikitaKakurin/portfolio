@@ -1,10 +1,12 @@
 "use strict"
 
-import i18Obj from "./translate.js";
 import changeLanguage from "./i18n.js";
 import { changeImages } from "./portfolioChangeImg.js";
 import { preloadImages } from "./preloadImagesPortfolio.js";
 import { changeColorTheme } from "./changeColorTheme.js";
+import { getLocalStorage, setLocalStorage } from "./localStorage.js";
+import toggleClassActive from "./toggleClassActive.js";
+
 
 const video = document.querySelector(".section-video__video");
 const burgerButton = document.querySelector(".burger-button");
@@ -33,7 +35,7 @@ function handlerClick(event){
     }
 
     if(target.dataset.lang){
-        changeLanguage(i18Obj[target.dataset.lang]);
+        changeLanguage(target.dataset.lang);
         toggleClassActive(target, "toggle-language__button-active", languageButtons);
         return;
     };
@@ -43,28 +45,14 @@ function handlerClick(event){
             return;
         }
         changeImages(target)
-
         toggleClassActive(target, "section-portfolio__button-active", portfolioButtons);
         return;        
     }
 
     if(target.dataset.theme){
-        changeColorTheme(target);
+        changeColorTheme(target.dataset.theme);
         return;
-
-
     }
-
-
-
-
-    function toggleClassActive(target, nameOfClass, arrayOfElements){        
-        arrayOfElements.forEach(elem=>{
-            elem.classList.remove(nameOfClass)
-        })
-        target.classList.add(nameOfClass);
-    }
-
 }
 
 function handleClickOnBurgerButton(event){
@@ -118,12 +106,10 @@ window.onresize = function handler(event) {
     isCurrentSizeTablet = document.documentElement.clientWidth<=768;
     if(isTablet!==(isCurrentSizeTablet)){
         ChangePoster(isCurrentSizeTablet);
-    
         if(isMenuOpen){
             closeMenu();
         }
     }
-    
     if(isTablet){
         if(isMenuOpen){
             closeMenu();
@@ -145,6 +131,10 @@ function ChangePoster(isFormatTablet) {
 }
 
 ChangePoster(document.documentElement.clientWidth<=768);
+
+
+window.addEventListener('load', getLocalStorage);
+window.addEventListener("beforeunload",setLocalStorage);
 preloadImages(["summer", "winter", "spring"]);
 
 console.log(
