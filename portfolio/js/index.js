@@ -6,6 +6,7 @@ import { preloadImages } from "./preloadImagesPortfolio.js";
 import { changeColorTheme } from "./changeColorTheme.js";
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 import toggleClassActive from "./toggleClassActive.js";
+import { animateClickOnButton } from "./buttonsAnimation.js";
 
 
 const video = document.querySelector(".section-video__video");
@@ -40,6 +41,10 @@ function handlerClick(event){
         return;
     };
 
+    if(target.classList.contains("big-button")){
+        animateClickOnButton(target);
+    }
+
     if(target.dataset.season){
         if(target.classList.contains("section-portfolio__button-active")){
             return;
@@ -53,6 +58,8 @@ function handlerClick(event){
         changeColorTheme(target.dataset.theme);
         return;
     }
+
+
 }
 
 function handleClickOnBurgerButton(event){

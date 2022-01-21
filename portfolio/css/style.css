@@ -97,6 +97,7 @@ body {
 }
 /* -----------------Buttons in sections is below------------------- */
 .big-button{
+    position: relative;
     width: 220px;
     height: 55px;
     font-family: inherit;
@@ -108,6 +109,42 @@ body {
     text-align: center;
 	cursor: pointer;
 	transition: color 0.5s, background-color 0.5s;
+    overflow: hidden;
+}
+
+.big-button__cameraSvg{
+    position: absolute;
+    left:-100px;
+    top: 3px;
+    width: 45px;
+    height: 45px;
+    background-image: url("../assets/svg/photo-camera.svg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    filter: invert(100%);
+    z-index: 3;
+    transition: left .7s ease-in;
+    filter:invert(50%);
+}
+
+.big-button__animateText{
+    position: absolute;
+    white-space:nowrap;
+    transition: transform 0.7s ease-in, left .7s ease-in;
+}
+.big-button__flash{
+    position: absolute;
+    top: 8px;
+    left: 80px;
+    background-image: url("../assets/svg/flash.svg");
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    z-index: 4;
+    transition: transform 0.1s ease-in;
+    
 }
 
 /* -----------------Buttons in sections is above------------------- */
