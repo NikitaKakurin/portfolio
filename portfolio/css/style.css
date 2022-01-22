@@ -177,17 +177,19 @@ body {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
-	cursor: pointer;
-    transition: all .3s;
+	  cursor: pointer;
+    transition: color .5s;
 }
 
 .toggle-language__button:hover{
     color: var(--active-text-color);
+
 }
 
 .toggle-language__button-checked{
     color: var(--active-text-color);
 }
+
 
 .burger-background{
     display: none;
@@ -237,7 +239,6 @@ body {
     width: 60px;
     height: 2px;
     transform: translateY(-6px) rotate(45deg);
-        
 }
 
 /* ------------------Header is above----------------- */
