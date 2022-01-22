@@ -16,6 +16,8 @@ html{
     font-size: 20px;
 }
 
+
+
 *{
     box-sizing: border-box;
 }
@@ -27,6 +29,14 @@ body {
     background-color: var(--dark-color);
   }
 
+  .container-body{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--dark-color);
+}
   h1{
     margin: 0;
     font-family: "Merriweather", serif;
@@ -43,7 +53,7 @@ body {
 }
 
 .container{
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
 
@@ -66,7 +76,7 @@ body {
 
 /* ----------------Title in sections is below---------------- */
 
-.section-title{
+.section__title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,6 +158,9 @@ body {
 }
 
 .toggle-language{
+    display: flex;
+    gap: 10px;
+    align-items: center;
     font-weight: 700;
     color: var(--main-text-color);
 }
@@ -164,18 +177,68 @@ body {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
-	cursor: pointer;
+	  cursor: pointer;
     transition: color .5s;
+}
+
+.toggle-language__button:hover{
+    color: var(--active-text-color);
+
 }
 
 .toggle-language__button-checked{
     color: var(--active-text-color);
 }
-.toggle-language__button:hover{
-    color: var(--active-text-color);
+
+
+.burger-background{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 11;
 }
-.toggle-language span{
-    padding: 0 3px;
+
+.burger-button{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.burger-button:hover .burger-button__line{
+    background-color: var(--active-text-color);
+}
+
+.burger-button__line{
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-text-color);
+    transition: all 0.3s;
+    z-index: 13;
+}
+.burger-button__line-first{
+    width: 60px;
+    height: 2px;
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.burger-button__line-second{
+    display: none;
+}
+
+.burger-button__line-third{
+    width: 60px;
+    height: 2px;
+    transform: translateY(-6px) rotate(45deg);
 }
 
 /* ------------------Header is above----------------- */
@@ -222,14 +285,15 @@ body {
 }
 
 .section-skills__list{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+    row-gap: 34px;
     width: 100%;
     margin: 0;
     padding-top: 27px;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+    padding-left: 0;
 }
 
 .section-skills__item{
@@ -273,7 +337,7 @@ body {
 }
 
 .section-skills__item-paragraph{
-    margin: 0;
+    margin: 0 auto;
     width: 280px;
     height: 72px;
     font-size: .9rem;
@@ -296,6 +360,7 @@ body {
 .section-portfolio__container-buttons{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 60px;
     gap: 5px;
@@ -319,6 +384,7 @@ body {
 
 .section-portfolio__container-img{
     display: flex;
+    justify-content: center;
     gap: 25px;
     flex-wrap: wrap;
     padding: 0 20px;
@@ -344,6 +410,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.section-video__video{
+    width: 100%;
+}
 
 .section-video__main-play{
     position: absolute;
@@ -352,7 +421,7 @@ body {
     background-position: 0 center ;
     width: 130px;
     height: 130px;
-    z-index: 100;
+    z-index: 10;
     transition: all .5s;
 	cursor: pointer;
 }
@@ -375,6 +444,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    flex-wrap: wrap;
     margin-top:  60px; 
 }
 
@@ -441,7 +511,7 @@ body {
 .section-contacts{
     background-image: url("../assets/img/contacts-bg.jpg");
     padding-top: 27px;
-    padding-right: 25px ;
+    padding-right: 20px ;
     height: 700px;
 }
 
@@ -454,12 +524,12 @@ body {
     font-weight: 700;
     line-height: 4rem;
     letter-spacing: 0em;
-    width: 445px;
+    width: 450px;
     color: var(--active-text-color);
 }
 .section-contacts__form{
     margin-top: 40px;
-    width: 445px;
+    width: 450px;
     margin-left: auto;
 }
 
@@ -468,7 +538,7 @@ body {
 .section-contacts__form-email{
     padding-left: 18px;
     margin-bottom: 20px;
-    width: 450px;
+    width: 100%;
     font-family: inherit;
     font-size: 1rem;
     font-style: normal;
@@ -507,16 +577,8 @@ body {
 }
 
 .section-contacts__form-message{
-    width: 450px;
     height: 100px;
-    resize: none;
-    font-family: inherit;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2rem;
-    letter-spacing: 0em;
-    color: var(--active-text-color);
+    resize: none;  
 }
 
    
