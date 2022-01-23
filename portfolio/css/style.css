@@ -257,7 +257,7 @@ body {
     border: none;
     color: var(--main-text-color);
 	cursor: pointer;
-    transition: all .3s;
+    transition: color .5s;
     text-transform: uppercase;
 }
 
