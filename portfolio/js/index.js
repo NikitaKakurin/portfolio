@@ -7,6 +7,7 @@ import { changeColorTheme } from "./changeColorTheme.js";
 import { getLocalStorage, setLocalStorage } from "./localStorage.js";
 import toggleClassActive from "./toggleClassActive.js";
 import { animateClickOnButton } from "./buttonsAnimation.js";
+import { handleClickOnVideo } from "./videoPlayer.js";
 
 
 const video = document.querySelector(".section-video__video");
@@ -16,6 +17,7 @@ const menu = document.querySelector(".menu__list");
 const burgerBackground = document.querySelector(".burger-background");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const portfolioButtons = document.querySelectorAll("[data-season]");
+
 
 let isMenuOpen = false;
 let isTablet;
@@ -57,6 +59,10 @@ function handlerClick(event){
     if(target.dataset.theme){
         changeColorTheme(target.dataset.theme);
         return;
+    }
+
+    if(target.classList.contains("section-video__main-play")){
+        handleClickOnVideo();
     }
 
 
