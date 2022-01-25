@@ -1,8 +1,7 @@
-
 export function animateClickOnButton(target){
-    const camera = document.createElement('span');
-    const text = document.createElement('span');
-    const flash = document.createElement('span');
+    let camera = document.createElement('span');
+    let text = document.createElement('span');
+    let flash = document.createElement('span');
     flash.classList.add('big-button__flash');
     text.innerText = target.innerText;
     text.classList.add('big-button__animateText');
@@ -73,6 +72,9 @@ export function animateClickOnButton(target){
 
         function clearButton(){
             target.innerHTML = text.textContent;
+            camera = null;
+            text = null;
+            flash = null;
         }
     }
 
