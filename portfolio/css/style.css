@@ -69,6 +69,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--body-color);
+
   }
 
   .container-body{
@@ -256,7 +257,7 @@ body {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
-	cursor: pointer;
+  	cursor: pointer;
     transition: color .5s;
     text-transform: uppercase;
 }
@@ -268,6 +269,7 @@ body {
 .toggle-language__button-active{
     color: var(--btns-language-color-active);
 }
+
 
 .burger-background{
     display: none;
@@ -317,7 +319,6 @@ body {
     width: 60px;
     height: 2px;
     transform: translateY(-6px) rotate(45deg);
-        
 }
 
 .toggle-color-theme__button{

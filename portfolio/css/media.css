@@ -265,13 +265,7 @@
         background-size: auto 530px;
     }
 
-    .menu__list{
-        right: -80.73vw;
-        width: 80.73vw;
-        height: 1024px;
-        padding-left: 127px;
-        padding-top: 134px;
-    }
+
 /* ------------------Header is above----------------- */
 
 /* ------------------section__hero is below----------------- */
@@ -295,6 +289,12 @@
         
     }
 /* ------------------section__hero is above----------------- */
+}
+@media (max-width:620px) {
+    .menu__list{
+        right: -100vw;
+        width: 100vw;
+    }
 }
 
 @media (max-width:575px) {
@@ -383,7 +383,6 @@
         padding-left: 27px;
         padding-top: 34px;
     }
-
     .section__title{
         width: 90%;
     }
