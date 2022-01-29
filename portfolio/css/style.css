@@ -7,6 +7,8 @@
 
     --burger-menu-link-color:#bdae82;
     --burger-menu-link-color-hover:#ffffff;
+    --burger-button-hover:#bdae82;
+    --active-header-text-color:#bdae82;
 
     --hero-bg-img:url("../assets/img/dark-theme/hero-bg.jpg");
     --contacts-bg-img:url("../assets/img/dark-theme/contacts-bg.jpg");
@@ -44,6 +46,8 @@
 
     --filter-icon:none;
     --filter-theme-icon-hover:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+	contrast(87%);
+    --filter-logo-icon-hover:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
 	contrast(87%);
     --filter-icon-hover:invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
 	contrast(87%);
@@ -121,16 +125,24 @@ body {
     background-image: url("../assets/svg/photo-camera.svg");
     background-repeat: no-repeat;
     background-position: cover;
-    filter: invert(100%);
     z-index: 3;
     transition: left .7s ease-in;
+    -webkit-transition: left .7s ease-in;
+    -moz-transition: left .7s ease-in;
+    -ms-transition: left .7s ease-in;
+    -o-transition: left .7s ease-in;
     filter:invert(50%);
+    -webkit-filter:invert(50%);
 }
 
 .big-button__animateText{
     position: absolute;
     white-space:nowrap;
     transition: transform 0.7s ease-in, left .7s ease-in;
+    -webkit-transition: transform 0.7s ease-in, left .7s ease-in;
+    -moz-transition: transform 0.7s ease-in, left .7s ease-in;
+    -ms-transition: transform 0.7s ease-in, left .7s ease-in;
+    -o-transition: transform 0.7s ease-in, left .7s ease-in;
 }
 .big-button__flash{
     position: absolute;
@@ -144,7 +156,10 @@ body {
     filter: invert(100%);
     z-index: 4;
     transition: transform 0.1s ease-in;
-    
+    -webkit-transition: transform 0.1s ease-in;
+    -moz-transition: transform 0.1s ease-in;
+    -ms-transition: transform 0.1s ease-in;
+    -o-transition: transform 0.1s ease-in;
 }
 
 /* -----------------Buttons in sections is above------------------- */
@@ -201,15 +216,21 @@ body {
     height: 40px;
     background-image: url('../assets/svg/logo.svg');
     background-size: contain;
-    background-repeat: no-repeat; 
-	cursor: pointer; 
-    transition: 0.5s;
+    background-repeat: no-repeat;
+    cursor: pointer;
     filter: var(--filter-icon);
-  }
+    -webkit-filter: var(--filter-icon);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
   
   .logo:hover {
-    filter: var(--filter-icon-hover);
-  }
+    filter: var(--filter-logo-icon-hover);
+    -webkit-filter: var(--filter-logo-icon-hover);
+}
 
 .menu{
     margin-left: auto;
@@ -230,9 +251,13 @@ body {
     letter-spacing: 0em;
     color: var(--main-text-color);
     transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
 }
 .menu__link:hover{
-    color: var(--active-text-color);
+    color: var(--active-header-text-color);
 }
 
 .toggle-language{
@@ -244,7 +269,7 @@ body {
     margin-right: 38px;
 }
 .toggle-language__button{
-	padding: 0;
+    padding: 0;
     margin: 0;
     font-family: inherit;
     font-size: 1rem;
@@ -256,13 +281,17 @@ body {
     background-color: transparent;
     border: none;
     color: var(--main-text-color);
-	cursor: pointer;
-    transition: color .5s;
+    cursor: pointer;
     text-transform: uppercase;
+    transition: color .5s;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition: color .5s;
 }
 
 .toggle-language__button:hover{
-    color: var(--btns-language-color-hover);
+    color: var(--active-header-text-color);
 }
 
 .toggle-language__button-active{
@@ -293,7 +322,7 @@ body {
 }
 
 .burger-button:hover .burger-button__line{
-    background-color: var(--active-text-color);
+    background-color: var(--burger-button-hover);
 }
 
 .burger-button__line{
@@ -301,12 +330,21 @@ body {
     height: 3px;
     background-color: var(--main-text-color);
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
     z-index: 13;
 }
+
 .burger-button__line-first{
     width: 60px;
     height: 2px;
     transform: translateY(6px) rotate(-45deg);
+    -webkit-transform: translateY(6px) rotate(-45deg);
+    -moz-transform: translateY(6px) rotate(-45deg);
+    -ms-transform: translateY(6px) rotate(-45deg);
+    -o-transform: translateY(6px) rotate(-45deg);
 }
 
 .burger-button__line-second{
@@ -317,7 +355,10 @@ body {
     width: 60px;
     height: 2px;
     transform: translateY(-6px) rotate(45deg);
-        
+    -webkit-transform: translateY(-6px) rotate(45deg);
+    -moz-transform: translateY(-6px) rotate(45deg);
+    -ms-transform: translateY(-6px) rotate(45deg);
+    -o-transform: translateY(-6px) rotate(45deg);
 }
 
 .toggle-color-theme__button{
@@ -341,9 +382,15 @@ body {
 .toggle-color-theme__button:hover{
     filter: var(--filter-icon);
     transition: filter 0.5s;
+    -webkit-filter: var(--filter-icon);
+    -webkit-transition: filter 0.5s;
+    -moz-transition: filter 0.5s;
+    -ms-transition: filter 0.5s;
+    -o-transition: filter 0.5s;
 }
 .toggle-color-theme__button:hover{
     filter: var(--filter-theme-icon-hover);
+    -webkit-filter: var(--filter-theme-icon-hover);
 }
 
 

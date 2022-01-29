@@ -17,12 +17,13 @@ const menu = document.querySelector(".menu__list");
 const burgerBackground = document.querySelector(".burger-background");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const portfolioButtons = document.querySelectorAll("[data-season]");
-
+const colorThemeButton = document.querySelector('[data-theme]');
 
 let isMenuOpen = false;
 let isTablet;
 let currentSizeMenu = menu.clientWidth;
 let isCurrentSizeTablet;
+
 document.addEventListener("click", handlerClick)
 function handlerClick(event){
     const target = event.target;
@@ -82,6 +83,7 @@ function openMenu(){
     isMenuOpen = true;
     menu.style.right = "0px";
     burgerBackground.style.display= "block";
+    changeBurgerColorHover(isMenuOpen);
 }
 
 function closeMenu(){
@@ -90,6 +92,15 @@ function closeMenu(){
     isMenuOpen = false;
     menu.style.right = -currentSizeMenu+"px";
     burgerBackground.style.display= "none";
+    changeBurgerColorHover(isMenuOpen);
+}
+
+function changeBurgerColorHover(isOpen){
+    if(isOpen){
+        document.documentElement.style.setProperty('--burger-button-hover', '#bdae82' );
+    }else if(colorThemeButton.dataset.theme === 'dark-theme'){
+        document.documentElement.style.setProperty('--burger-button-hover', '#ffffff' );
+    }
 }
 
 function changeBurgerButton({isToOpen}) {
@@ -120,6 +131,7 @@ window.onresize = function handler(event) {
     if(isTablet!==(isCurrentSizeTablet)){
         ChangePoster(isCurrentSizeTablet);
         if(isMenuOpen){
+            debugger;
             closeMenu();
         }
     }

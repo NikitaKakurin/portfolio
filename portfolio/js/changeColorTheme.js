@@ -5,6 +5,8 @@ const cssPropertiesWhiteTheme = {
 
     '--burger-menu-link-color': '#1c1c1c',
     '--burger-menu-link-color-hover': '#bdae82',
+    '--burger-button-hover':'#ffffff',
+    '--active-header-text-color':'#ffffff',
 
     '--hero-bg-img':'url("../assets/img/white-theme/hero-bg.jpg")',
     '--contacts-bg-img':'url("../assets/img/white-theme/contacts-bg.jpg")',
@@ -40,11 +42,10 @@ const cssPropertiesWhiteTheme = {
     '--filter-theme-icon':`invert(6%) sepia(10%) saturate(4%) 
                             hue-rotate(314deg) brightness(99%) contrast(89%)`,
 
-    '--filter-theme-icon-hover':`invert(82%) sepia(7%)
-                            saturate(1536%) hue-rotate(7deg) brightness(89%) contrast(77%)`,
+    '--filter-theme-icon-hover':`invert(100%)`,
 
     '--filter-icon':'invert(100%)',
-
+    '--filter-logo-icon-hover': 'none',
     '--filter-icon-hover':`invert(26%) sepia(15%)
                          saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%)`
 };
