@@ -530,6 +530,10 @@ body {
     border: 2px solid var(--active-text-color);
     color: var(--btns-portfolio-color);
     transition: color 0.5s, background-color 1s;
+    -webkit-transition: color 0.5s, background-color 1s;
+    -moz-transition: color 0.5s, background-color 1s;
+    -ms-transition: color 0.5s, background-color 1s;
+    -o-transition: color 0.5s, background-color 1s;
 }
 
 .section-portfolio__button:hover{
@@ -557,6 +561,10 @@ body {
     max-width: 450px;
     height: auto;
     transition: opacity 0.5s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
 }
 /* ------------------section__portfolio is above----------------- */
 
@@ -588,11 +596,16 @@ body {
     height: 130px;
     z-index: 10;
     transition: all .5s;
-	cursor: pointer;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
 }
 
 .section-video__main-play:hover{
     filter: var(--filter-icon-hover);
+    -webkit-filter: var(--filter-icon-hover);
 }
 
 /* ------------------section__video is above----------------- */
@@ -721,6 +734,10 @@ body {
     cursor: pointer;
     border: 2px solid var(--active-text-color);
     transition: color .5s;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition: color .5s;
 }
 
 
@@ -733,14 +750,18 @@ body {
 .section-contacts__form-message::placeholder,
 .section-contacts__form-phone::placeholder,
 .section-contacts__form-email::placeholder{
-    font-family: inherit;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2rem;
-    letter-spacing: 0em;
-    color: var(--contacts-text-placeholder);
+	font-family: inherit;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2rem;
+	letter-spacing: 0em;
+	color: var(--contacts-text-placeholder);
 	transition: color .5s;
+	-webkit-transition: color .5s;
+	-moz-transition: color .5s;
+	-ms-transition: color .5s;
+	-o-transition: color .5s;
 }
 
 .section-contacts__form-message:hover,
@@ -831,6 +852,10 @@ body {
 	width: 32px;
 	height: 32px;
 	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
 }
 .footer-container__social-icon-instagram{
   	background-image: url("../assets/svg/inst.svg");
@@ -850,8 +875,10 @@ body {
 
 .footer-container__social-icon {
     filter: var(--filter-icon);
-  }
+    -webkit-filter: var(--filter-icon);
+}
 
 .footer-container__social-icon:hover {
     filter: var(--filter-social-icon-hover);
-  }
+    -webkit-filter: var(--filter-social-icon-hover);
+}

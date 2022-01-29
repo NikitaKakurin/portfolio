@@ -30,7 +30,7 @@
         padding-top: 134px;
         margin: 0;
         flex-direction: column;
-        gap: 23px; 
+        gap: 23px;
         font-family: 'Merriweather',serif;
         font-size: 40px;
         font-style: normal;
@@ -40,7 +40,11 @@
         text-align: left;
         background-color: var(--body-color);
         transition: right 0.5s;
-    }
+        -webkit-transition: right 0.5s;
+        -moz-transition: right 0.5s;
+        -ms-transition: right 0.5s;
+        -o-transition: right 0.5s;
+}
 
     .menu__link{
         color: var(--burger-menu-link-color);
@@ -68,7 +72,11 @@
         transform: rotate(360deg);
         z-index: 13;
         margin-left: 30px;
-    }
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
 
 
 /* ------------------Header is above----------------- */
@@ -335,7 +343,8 @@
             width: 300px;
             margin-top: 10px;
             margin-bottom: 40px;
-            margin-left: auto;margin-right: auto;
+            margin-left: auto;
+            margin-right: auto;
             
         }
 
