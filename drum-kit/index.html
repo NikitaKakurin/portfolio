@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Drum-kit</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Drum-kit</h1>
+    </header>
+    <main>
+        <nav class="nav-slider">
+           <h2 class="slider-header">Choose a musical instrument</h2>
+           <div class="slider">
+              <div class="prev buttonSlide">&#8592;</div>
+              <div class="sliderImgPlace">
+                 <img class = "img-slide" src="assets/img/drum-kit.jpg" alt="drum-kit">
+              </div>
+              <div class="next buttonSlide">&#8594;</div>
+           </div>
+        </nav>
+        <div class="notes">
+            <div class="flex-container keys">
+                <div class="key" data-key="65"> 
+                        <kbd>A</kbd>
+                       <span class="sound">Clap</span>
+                </div>
+                <div class="key" data-key="83">
+                   <kbd>S</kbd>
+                   <span class="sound">Hihat</span>
+                </div>
+                <div class="key" data-key="68">
+                   <kbd>D</kbd>
+                   <span class="sound">Kick</span>
+                </div>
+                <div class="key" data-key="70">
+                   <kbd>F</kbd>
+                   <span class="sound">Openhat</span>
+                </div>
+                <div class="key" data-key="71">
+                   <kbd>G</kbd>
+                   <span class="sound">Boom</span>
+                </div>
+                <div class="key" data-key="72">
+                   <kbd>H</kbd>
+                   <span class="sound">Ride</span>
+                </div>
+                <div class="key noGuitar" data-key="74">
+                   <kbd>J</kbd>
+                   <span class="sound">Snare</span>
+                </div>
+                <div class="key noGuitar" data-key="75">
+                   <kbd>K</kbd>
+                   <span class="sound">Tom</span>
+                </div>
+                <div class="key noGuitar" data-key="76">
+                   <kbd>L</kbd>
+                   <span class="sound">Tink</span>
+                </div>
+            </div>
+            <!--Audio for Drum-kit-->
+            <audio src="assets/audio/drum-kit/clap.wav" class="audio drum-kit" data-key="65"></audio>
+            <audio src="assets/audio/drum-kit/hihat.wav" class="audio drum-kit" data-key="83"></audio>
+            <audio src="assets/audio/drum-kit/kick.wav" class="audio drum-kit" data-key="68"></audio>
+            <audio src="assets/audio/drum-kit/openhat.wav" class="audio drum-kit" data-key="70"></audio>
+            <audio src="assets/audio/drum-kit/boom.wav" class="audio drum-kit" data-key="71"></audio>
+            <audio src="assets/audio/drum-kit/ride.wav" class="audio drum-kit" data-key="72"></audio>
+            <audio src="assets/audio/drum-kit/snare.wav" class="audio drum-kit" data-key="74"></audio>
+            <audio src="assets/audio/drum-kit/tom.wav" class="audio drum-kit" data-key="75"></audio>
+            <audio src="assets/audio/drum-kit/tink.wav" class="audio drum-kit" data-key="76"></audio>
+            <!--Audio for Guitar-->
+            <audio src="assets/audio/guitar/1str.mp3" class="audio guitar" data-key="65"></audio>
+            <audio src="assets/audio/guitar/2str.mp3" class="audio guitar" data-key="83"></audio>
+            <audio src="assets/audio/guitar/3str.mp3" class="audio guitar" data-key="68"></audio>
+            <audio src="assets/audio/guitar/4str.mp3" class="audio guitar" data-key="70"></audio>
+            <audio src="assets/audio/guitar/5str.mp3" class="audio guitar" data-key="71"></audio>
+            <audio src="assets/audio/guitar/6str.mp3" class="audio guitar" data-key="72"></audio>
+            
+        </div>
+
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

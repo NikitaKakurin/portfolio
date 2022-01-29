@@ -73,6 +73,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--body-color);
+
   }
 
   .container-body{
@@ -297,6 +298,7 @@ body {
 .toggle-language__button-active{
     color: var(--btns-language-color-active);
 }
+
 
 .burger-background{
     display: none;

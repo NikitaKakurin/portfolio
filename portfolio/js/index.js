@@ -104,13 +104,13 @@ function changeBurgerColorHover(isOpen){
 }
 
 function changeBurgerButton({isToOpen}) {
+    let fun;
+    if(isToOpen){
+        fun = "add";
+    } else{
+        fun = "remove";
+    }
     burgerButtonLines.forEach((elem, index)=>{
-        let fun;
-        if(isToOpen){
-            fun = "add";
-        } else{
-            fun = "remove";
-        }
         switch (index){
             case 0:
                 elem.classList[fun]("burger-button__line-first");
