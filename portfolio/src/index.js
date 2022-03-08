@@ -1,13 +1,20 @@
-"use strict"
+import './css/normalize.css';
+import './css/style.css';
+import './css/media.css';
 
-import changeLanguage from "./i18n.js";
-import { changeImages } from "./portfolioChangeImg.js";
-import { preloadImages } from "./preloadImagesPortfolio.js";
-import { changeColorTheme } from "./changeColorTheme.js";
-import { getLocalStorage, setLocalStorage } from "./localStorage.js";
-import toggleClassActive from "./toggleClassActive.js";
-import { animateClickOnButton } from "./buttonsAnimation.js";
-import { handleClickOnVideo } from "./videoPlayer.js";
+import changeLanguage from "./js/i18n.js";
+import { changeImages } from "./js/portfolioChangeImg.js";
+import { preloadImages } from "./js/preloadImagesPortfolio.js";
+import { changeColorTheme } from "./js/changeColorTheme.js";
+import { getLocalStorage, setLocalStorage } from "./js/localStorage.js";
+import toggleClassActive from "./js/toggleClassActive.js";
+import { animateClickOnButton } from "./js/buttonsAnimation.js";
+import { handleClickOnVideo } from "./js/videoPlayer.js";
+
+import bigPoster from './assets/img/video-poster.jpg';
+import smallPoster from './assets/img/video-player-mini.jpg';
+
+
 
 
 const video = document.querySelector(".section-video__video");
@@ -19,10 +26,15 @@ const languageButtons = document.querySelectorAll("[data-lang]");
 const portfolioButtons = document.querySelectorAll("[data-season]");
 const colorThemeButton = document.querySelector('[data-theme]');
 
+
+
 let isMenuOpen = false;
 let isTablet;
 let currentSizeMenu = menu.clientWidth;
 let isCurrentSizeTablet;
+
+video.poster = bigPoster;
+
 
 document.addEventListener("click", handlerClick)
 function handlerClick(event){
@@ -147,10 +159,10 @@ window.onresize = function handler(event) {
 
 function ChangePoster(isFormatTablet) {
     if(isFormatTablet){
-        video.poster="./assets/img/video-player-mini.jpg";
+        video.poster = smallPoster;
         isTablet = true;
     }else{
-        video.poster="./assets/img/video-poster.jpg";
+        video.poster = bigPoster;
         isTablet = false;
     }
 }
