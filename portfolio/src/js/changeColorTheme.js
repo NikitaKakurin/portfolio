@@ -1,3 +1,5 @@
+import whiteHeroBG from '../assets/img/white-theme/hero-bg.jpg';
+import whiteContactBG from '../assets/img/white-theme/contacts-bg.jpg'
 const cssPropertiesWhiteTheme = {
     '--main-text-color': '#1c1c1c',
     '--active-text-color': '#bdae82',
@@ -8,8 +10,8 @@ const cssPropertiesWhiteTheme = {
     '--burger-button-hover':'#ffffff',
     '--active-header-text-color':'#ffffff',
 
-    '--hero-bg-img':'url("../assets/img/white-theme/hero-bg.jpg")',
-    '--contacts-bg-img':'url("../assets/img/white-theme/contacts-bg.jpg")',
+    '--hero-bg-img':`url(${whiteHeroBG})`,
+    '--contacts-bg-img':`url(${whiteContactBG})`,
 
     '--btns-hire-contacts-bgcolor':'#fff',
     '--btns-hire-contacts-color':'#1c1c1c',
