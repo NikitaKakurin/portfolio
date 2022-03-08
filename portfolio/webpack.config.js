@@ -84,11 +84,11 @@ module.exports = {
         new MiniCssExtractPlugin({
           filename: filename("css")
         }),
-        new CopyWebpackPlugin({
-          patterns: [
-            { from: path.resolve(__dirname,"src/favicon.ico"), to: path.resolve(__dirname,"dist") },
-          ],
-        }),
+        // new CopyWebpackPlugin({
+          // patterns: [
+          //    { from: path.resolve(__dirname,"src/favicon.ico"), to: path.resolve(__dirname,"dist") },
+          // ],
+        // }),
     ],
     module: {
         rules: [
