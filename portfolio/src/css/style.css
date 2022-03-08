@@ -69,11 +69,17 @@ html{
 }
 
 body {
+    background-color: #000000;
+
+  }
+
+  .container-screen{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--body-color);
-
+    width: 100%;
+    background: var(--body-color);
+    transition: background .3s, opacity .3s;
   }
 
   .container-body{
@@ -82,6 +88,8 @@ body {
     padding: 0;
     overflow: hidden;
     position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
 }
   h1{
     margin: 0;

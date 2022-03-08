@@ -52,7 +52,7 @@ const cssPropertiesWhiteTheme = {
                          saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%)`
 };
 const button = document.querySelector(".toggle-color-theme__button");
-
+const container = document.querySelector('.container-screen')
 export function changeColorTheme(colorTheme){
     if(colorTheme === "white-theme"){
         button.dataset.theme = "dark-theme";
@@ -64,15 +64,28 @@ export function changeColorTheme(colorTheme){
 
     
     function displayWhiteTheme(){
-        for (let prop in cssPropertiesWhiteTheme){
-            document.documentElement.style.setProperty(prop, cssPropertiesWhiteTheme[prop])
+        container.style.opacity = 0.1;
+        container.addEventListener('transitionend', changeColorToWhite);
+        function changeColorToWhite(){
+            container.removeEventListener('transitionend', changeColorToWhite);
+            container.style.opacity = 1;
+            for (let prop in cssPropertiesWhiteTheme){
+                document.documentElement.style.setProperty(prop, cssPropertiesWhiteTheme[prop])
+            }
         }
     }
 
     function displayDarkTheme(){
-        for (let prop in cssPropertiesWhiteTheme){
-            document.documentElement.style.setProperty(prop, "")
+        container.style.opacity = 0.1;
+        container.addEventListener('transitionend', changeColorToWhite);
+        function changeColorToWhite(){
+            container.removeEventListener('transitionend', changeColorToWhite);
+            container.style.opacity = 1;
+            for (let prop in cssPropertiesWhiteTheme){
+                document.documentElement.style.setProperty(prop, "")
+            }
         }
+
     }
      
 }
