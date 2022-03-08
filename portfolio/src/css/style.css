@@ -79,7 +79,7 @@ body {
     justify-content: space-between;
     width: 100%;
     background: var(--body-color);
-    transition: background .3s, opacity .3s;
+    transition: opacity .3s;
   }
 
   .container-body{
